@@ -44,7 +44,7 @@ Now you're ready to start learning some Clojure, but if you curious to
 learn more about working from the command line, a.k.a. the shell, you
 might enjoy the [[http://linuxcommand.org/index.php][Linux Command]] site.
 
-Proceed to the section below [[Learning Paths]].
+Proceed to the section below [[#learning-paths]].
 
 ** A note to Windows users
    :PROPERTIES:
