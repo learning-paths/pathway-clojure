@@ -36,7 +36,8 @@ instructions for Linux, OS X, and Windows systems. If you are a Windows
 user, please go through the tutorial once and learn the built-in Windows
 commands and then repeat the tutorial after reading the note below to
 Windows users and installing Babun. On your second time through, follow
-the instructions for Linux shell commands. Many web docs ignore Windows
+the instructions in the tutorial for Linux shell commands within your
+newly installed Bubun shell. Many web docs ignore Windows
 users. Achieving this small goal will pay off big for you over time by
 being able to follow many online docs written for Linux users.
 
@@ -44,7 +45,7 @@ Now you're ready to start learning some Clojure, but if you curious to
 learn more about working from the command line, a.k.a. the shell, you
 might enjoy the [[http://linuxcommand.org/index.php][Linux Command]] site.
 
-Proceed to the section below [[#learning-paths]].
+Proceed to the section below [[Learning Paths]].
 
 ** A note to Windows users
    :PROPERTIES:
@@ -53,10 +54,9 @@ Proceed to the section below [[#learning-paths]].
 
 In order to simplify this training material for both writers and
 readers, we assume that you are using bash or zsh with standard tools
-such as git, grep, wget, curl, etc. The best way to achieve this on a
-Windows machine is to install and use
-[[http://babun.github.io/][Babun]]. For more details on installing
-Babun, please see the freely available video series
+such as git, grep, wget, curl, etc. One way to achieve this on a
+Windows machine is to install and use [[http://babun.github.io/][Babun]]. For more details on installing
+Babun, please see the freely available video series 
 /[[https://youtu.be/rl7PzPAZDyY][Command Line Power User]]/ by Wes Bos.
 
 ** Learning Paths
