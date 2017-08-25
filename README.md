@@ -3,6 +3,15 @@
 A curated path toward Clojure mastery.
 
 
+## Welcome!
+
+Above all, this tutorial aims to be a friendly and welcoming place for people of all skill levels to interact around the subject of computer programming.
+
+Are you a person? Are you still breathing?
+
+Check. And check. That's it. You're in!
+
+
 ## What is Clojure?
 
 Clojure's official [website](https://clojure.org/) provides this concise answer:
@@ -20,7 +29,7 @@ The Datomic database allows database queries to be written by a wider swath of t
 clojure is declarative in nature. ideally, well-written clojure is like having a conversation about what we need from the computer, generally some form of information processing. let me qualify that statement by being candid with you. in order for you to be a masterful conversationalist in clojure will likely take two years of practice, several days per week.
 
 
-### clojure is a lisp
+### Clojure is a lisp
 
 clojure is a dialect of lisp, which is short for "list processor". this is clojure's great superpower, but also the reason behind its inherent learning curve. fear not! this tutorial will direct you toward a free [online course](https://www.edx.org/course/how-code-simple-data-ubcx-htc1x) designed to take the sting out of learning lisp.
 
@@ -31,7 +40,7 @@ you will often hear clojure developers using phrases such as `code as data` or `
 the net effect? clojure democratizes access to powerful programming techniques, thus tearing down that wall between you and your potential creativity.
 
 
-### clojure is *data-centric*
+### Clojure is *data-centric*
 
 rich hickey, in his seminal talk *[simple made easy](https://www.infoq.com/presentations/simple-made-easy)*, observes that reliable modern software systems communicate with each other by sending and receiving data. ironically, many programming languages and paradigms, such as java and certain flavors of object orientation, attempt to bury data deep within the myriad building blocks of their programs. in contrast, clojure liberates data. it elevates data front-and-center, thus increasing the reliability of systems written in clojure.
 
@@ -79,7 +88,7 @@ Clojure is a bit of a paradox. On one hand, it's rock solid in the core function
 
 Clojure isn't shy about borrowing what works. Communicating Sequential Processes have been popularized by Google's Go language. Clojure adopted this paradigm via its core.async library (a named set of functions). Clojurians have been quick to pick up CSP, but have learned that (in general) its best used at the edge of a system, not at the heart of one. I mention this because I've learned so much more than I ever thought possible because of the brilliant minds in Clojure who freely share their hard earned programming wisdom.
 
-These professionals aren't doing things the hard way. They are going with the grain of the wood and solving problems in the most natural possible way. It isn't a perfect way. There's a lot which can be improved and the work is underway. The progress early Clojurians have made since its inception in 2007 is staggering! We are truly standing on the shoulder of giants.
+These professionals aren't doing things the hard way. They are going with the grain of the wood and solving problems in the most natural possible way. It isn't a perfect way. There's are still a few things which can be improved but the work is well underway. The progress early Clojurians have made since its inception in 2007 is staggering! We are truly standing on the shoulder of giants.
 
 To me, Clojure represents a better way of doing things.
 
@@ -95,13 +104,18 @@ You will be readily welcomed anywhere you happen to plug into the community onli
 
 ## Why learn Clojure?
 
-Two prongs: Learning Curiosity / Pragmatic Productivity
+I can't answer this question for you. That would be too presumptive of me. But I can tell you why I chose Clojure.
 
+In a nutshell, Clojure ticks two major boxes for me.
 
+First and foremost, Clojure is highly practical. Rick Hickey has focused the language strongly around creating business value. There's a recent [success story](https://youtu.be/3y7xzH8jB8A) about an Indonesian company that has experienced a 500% increase in feature release productivity after switching from Go to Clojure. I intend to use Clojure pervasively in my businesses. Clojure is general enough that I could pivot my business in practically any direction and still use Clojure to build on. 
 
+Secondly, Clojure opens up a world of learning and exploration above and beyond what I experienced in other languages. Perhaps this has a lot to do with where I was in my learning journey at the time, but I'm convinced that there really is something uniquely special about the ideas I'm being exposed to in this community. 
 
+As a life-long learner my insatiable curiosity will be occupied for years to come. Paradoxically, [Clojure is boring](https://8thlight.com/blog/colin-jones/2016/10/06/clojure-is-boring.html), and that's a good thing!
 
+There are other lesser reasons, which I will add below as they come to me.
 
+Clojure is web scale out of the box. Clojure has powerful concurrency primitives built-in to the heart of the language. It is unconstrained by a Global Interpreter Lock (GIL), like Ruby and Python are. This isn't a big deal for most new companies, but if you are lucky enough to experience overnight success, perhaps you get selected to go the Oprah show, then you'll be glad you picked Clojure. Most of these web scale issues have to do with architectural issues in addition to language features. A web search for `ruby on rails twitter scaling issues` will list articles which collectively should tell both sides of the story pretty well. Oh, the problems we should have, right!?!
 
-
-
+(To be continued soon...)
