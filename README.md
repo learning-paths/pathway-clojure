@@ -70,9 +70,11 @@ for example, clojure has an array-like data structure called a vector to store o
 
 and it has an associative data structure, similar to a javascript object or python dictionary, called a clojure map or hashmap:
 
-```{:a 1
-    :b 2
-    :c 3}```
+```
+{:a 1
+ :b 2
+ :c 3}
+ ```
     
 while these look familiar to data structures found elsewhere, clojure's data structures contain a hidden strength. they are immutable. pause and let that sink in. in clojure, data never changes. what!?! i know this is weird. but its also incredibly powerful.
 
