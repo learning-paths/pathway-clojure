@@ -1,0 +1,12 @@
+* Introduction
+The following steps walk through getting started with Clojure and ClojureScript using Nightlight, an embedded editor for Clojure. 
+* Steps
+** 
+ From the shell, run:
+
+  
+
+** 
+
+~git clone https://github.com/webappzero/nightlight-starter.git~
+
