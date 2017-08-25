@@ -5,11 +5,43 @@ A curated path toward Clojure mastery.
 
 ## Welcome!
 
-Above all, this tutorial aims to be a friendly and welcoming place for people of all skill levels to interact around the subject of computer programming.
+Above all, this guide aims to be a friendly and welcoming place for people of all skill levels to interact around the subject of computer programming.
 
 Are you a person? Are you still breathing?
 
 Check. And check. That's it. You're in!
+
+## Goal & Audience
+
+Our goal is to help you learn to program reliable solutions to real world problems that you're interested in solving. We want to introduce you to powerful technology that might otherwise have escaped your attention. We want to show you a `better way` of doing things.
+
+To reach our goal, we will be directing you toward, free and paid, external online resources that best match your learning style and situation. This tutorial also contains original content to get your started and fill in the gaps between existing learning resources.
+
+This guide assumes you are willing to look up words on your own when you encounter unfamiliar terminology. We recommend the following online dictionary over Wikipedia because the definitions are more digestible due to their conciseness: http://foldoc.org
+
+It is a great challenge to write material which is both engaging to experienced programmers and comprehensible to new students. When the tension between these forces becomes too great, we will err on the side of being accessible to newcomers. That being said, I offer this word of advice to newcomers:
+
+> Let the information wash over your brain the first time through, during which time the new, unfamiliar ideas and symbols will seem highly foreign and strange. This is normal. The second time through, the off-putting novelty will fade and a deeper learning experience will emerge. By your third time revisiting a topic, you will be able to engage with the ideas more directly, with their essence and therefore glean the lion's share of potential learning reward. Perseverance wins in the end. We will do everything we can to grease the track as you go along.
+
+### About the Author; & Do I need math skills?
+
+My name is Jay Martin. My goal in writing this tutorial is to help others avoid the mistakes I made when first setting about to learn programming. I hope to reach the people who think that Clojure and functional programming is exclusively for `the really smart programmers` etc. Nonsense! Clojure is for those willing to put in the work to learn it.
+
+Learning is a topic I'm keenly interested in. After all, it affects every part of our lives. In my talk, [The Value of Learning](https://youtu.be/aEh5VAfp79A), I lay out two contrasting modes of learning, outside-in versus inside-out. These can be summarized informally by saying: either the crux of the responsibility and action of learning lies in the external environment of the student, i.e. with the University itself, or rather it lies within the individual student. Another way to think of it is whether or not the learning is being imparted to the student or whether the student is the one who is actively assimilating the learning experience.
+
+I believe we can improve both sides of this learning equation by taking a balanced approach. There's a time and place for both modes and we must experiment with the ratio, means and methods among these approaches to find the most effective way to help learners succeed in their learning goals. One area I'd like to focus on throughout this resource is that of reading code. I intend to expose newcomers to the code reading patterns of professional coders. I'm very excited about this idea and believe it has the potential to open us new areas of collaboration and connection between veterans and new recruits.
+
+If you are willing to try to learn, there is reward enough in the trying to justify your efforts here. It is my experience that anyone can significantly improve their own capacity for learning through the practice and effort of trying. Math is an unforgiving subject. Most of us, myself included get so busy in school that we fail to correct our understanding for that 10% of the material we missed on the exam. The following year, in Algebra II, that 10% becomes 20%, and so on, until the weight of our previous misunderstandings prevent us from even trying. That's normal. We told ourselves we preferred other subjects to math anyway. We shrugged it off by saying "I'm just not a math person".
+
+It's never too late to become a math person! Just ask Dr. Barbara Oakley of [Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn) internet fame. She became technical by _**trying**_.
+
+I'm 47 this year. Over these path three years, studying programming has re-invigorated my intellect and I'm happier than ever thanks to the mental challenge, regular exercise, good sleep routine, and a strong sense of purpose. I want to build things to improve the daily lives of people.
+
+To bolster my confidence in Math and fill in any gaps, I researched at-home math curriculum and purchased [the best Algebra course I could find](http://www.teachingtextbooks.com/). Of course, [Khan Academy](https://www.khanacademy.org/) is another high-quality freely available resource. It's true that many people claim [you don't have to be good at math to learn to code](https://www.theatlantic.com/technology/archive/2015/09/you-dont-have-to-be-good-at-math-to-learn-to-code/403342/), but I also think its good to start practicing a little math every week, because it's such a great way to warm up our problem solving acumen. It also helps when you want to read up on the theories and algorithms that underlay our programming languages and tools. This is completely optional but you just might find that a "take the bull by the horns " approach is motivating for you. If not, skip the math for now and pick it if and when the time feels right in your learning journey.
+
+### Authorship voice
+
+>By helping others who are just getting started with Clojure, it is my hope that more experienced Clojure developers will get involved in authoring this Open Source tutorial to strengthen the overall quality of information and method of delivery herein. For this reason, I use "We" and "Our" when offering general advice and direction, reserving "I" or "Me" for sharing direct personal experience about myself. If contributors wish to share such direct experiences, please include your name or internet handle in parentheses next to your use of "I" or "Me".
 
 
 ## What is Clojure?
@@ -24,18 +56,18 @@ Clojure runs on top of the Java Virtual Machine (JVM), itself an industrial grad
 
 ClojureScript brings Clojure's strengths to web development, and anywhere else that JavaScript runs.
 
-The Datomic database allows database queries to be written by a wider swath of the population because these queries are structured the way people think, not around the needs of the computer. not many programming languages can claim to share design continuity with any database, much less one of datomic's caliber.
+The Datomic database allows database queries to be written by a wider swath of the population because these queries are structured the way people think, not around the needs of the computer. Not many programming languages can claim to share design continuity with any database, much less one of datomic's caliber.
 
-Clojure is declarative in nature. ideally, well-written clojure is like having a conversation about what we need from the computer, generally some form of information processing. let me qualify that statement by being candid with you. in order for you to be a masterful conversationalist in clojure will likely take two years of practice, several days per week.
+Clojure is declarative in nature. ideally, well-written clojure is like having a conversation about what we need from the computer, generally some form of information processing. let me qualify that statement by being candid with you. In order for you to be a masterful conversationalist in clojure will likely take two years of practice, several days per week.
 
 
 ### Clojure is a lisp
 
 Clojure is a dialect of lisp, which is short for "list processor". this is clojure's great superpower, but also the reason behind its inherent learning curve. fear not! this tutorial will direct you toward a free [online course](https://www.edx.org/course/how-code-simple-data-ubcx-htc1x) designed to take the sting out of learning lisp.
 
-Lisp code, clojure included, is itself a highly consistent and uniform data structure. this makes it possible for mere mortals, like me, to generate and manipulate code programmatically. this is called meta-programming and is the realm of elite programmers in other languages such as python, ruby, java etc. in contrast to these languages, clojure is *inherently* a programmable programming language, allowing you and your team the power to extend clojure to suit your needs.
+Lisp code, clojure included, is itself a highly consistent and uniform data structure. This makes it possible for mere mortals, like me, to generate and manipulate code programmatically. This is called meta-programming and is the realm of elite programmers in other languages such as Python, Ruby, Java etc. In contrast to these languages, Clojure is *inherently* a programmable programming language, allowing you and your team the power to extend Clojure to suit your needs.
 
-You will often hear clojure developers using phrases such as `code as data` or `data as code`. this is a lisp thing and it will take months to sink in fully. with time and practice it make much more sense. you need to have your own natural aha! moment and you will never see programming the same again.
+You will often hear clojure developers using phrases such as `code as data` or `data as code`. This is a Lisp thing and it will take months to sink in fully. With time and practice it make much more sense. You need to have your own natural aha! Moment and you will never see programming the same again.
 
 The net effect? clojure democratizes access to powerful programming techniques, thus tearing down that wall between you and your potential creativity.
 
@@ -68,7 +100,7 @@ For example, clojure has an array-like data structure called a vector to store o
 
 ```[8 13 3 0 34 89]```
 
-Clojure also has an associative data structure, similar to a javascript object or python dictionary, called a clojure map or hashmap:
+Clojure also has an associative data structure, similar to a javascript object or python dictionary, called a clojure map, or hashmap to be precise:
 
 ```
 {:a 1
@@ -92,7 +124,7 @@ Clojure isn't shy about borrowing what works. Communicating Sequential Processes
 
 These professionals aren't doing things the hard way. They are going with the grain of the wood and solving problems in the most natural possible way. It isn't a perfect way. There's are still a few things which can be improved but the work is well underway. The progress early Clojurians have made since its inception in 2007 is staggering! We are truly standing on the shoulder of giants.
 
-To me, Clojure represents a better way of doing things.
+To me, Clojure represents a vision of a better way of doing things.
 
 ### Clojure is a community
 
