@@ -158,7 +158,7 @@ As a life-long learner my insatiable curiosity will be occupied for years to com
 
 There's also one significant technical reason I chose Clojure that has to do with databases. Most applications deal with nested data structures or object hierarchies. Object Relational Management layers are used to solve the N+1 problem and stuff nested data into tabular relational databases. I have first hand experience with an expertly built application which required significant alteration of the data model itself to accommodate the needs of the database.
 
-I [wrote more](http://discuss.purelyfunctional.tv/t/jay-martin-clojure-remote-2017-interview/925) about this reason in an online email interview with well-known Clojure educator, Eric Normand of [PurelyFunctional.tv](http://purelyfunctional.tv), which I refer you to if you'd like to dig deeper on the topic.
+I wrote more about this reason in an [online interview](http://discuss.purelyfunctional.tv/t/jay-martin-clojure-remote-2017-interview/925) with well-known Clojure educator, Eric Normand of [PurelyFunctional.tv](http://purelyfunctional.tv), which I refer you to if you'd like to dig deeper on the topic.
 
 ### Other reasons
 
