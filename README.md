@@ -1,6 +1,6 @@
-# Clojure for All
+# Pathway Clojure
 
-A curated path toward Clojure proficiency.
+A curated pathway toward software development proficiency, with Clojure and friends.
 
 
 ## Welcome!
@@ -10,6 +10,12 @@ Above all, this guide aims to be a friendly and welcoming place for people of al
 Are you a person? Are you still breathing?
 
 Check. And check. That's it. You're in!
+
+Please, imagine this scenario: You, me and maybe one other person have an idea for a software application. Wouldn't it be awesome if we could build and deploy a robust solution quickly? 
+
+I've dedicated myself to finding a way of building software that could leverage just such a small team to build great things and make a positive difference in people's lives. No path is perfect, but having a path is a world above not having one, at least in my experience. I've observed about myself, that I'm happier and more productive when I'm on a track, that is to say a defined path with specific learning goals.
+
+Welcome to such a track.
 
 ## Goal & Audience
 
@@ -165,7 +171,7 @@ Clojure is web scale out of the box. Clojure has powerful concurrency primitives
 
 ## Our online site
 
-The URL for this guide is: TBD.
+The URL for this guide is: http://pathwayclojure.org 
 
 
 ## Other Clojure quick start resources
