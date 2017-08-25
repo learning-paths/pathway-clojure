@@ -64,11 +64,11 @@ we are not dealing with zeros and ones, but rather data is helpful to problems w
 
 clojure provides and a small handful of data types in which to store data that represents information which is meaningful to you. these data types look familiar to those other popular languages, such as javascript.
 
-for example, clojure has an array-like data structure called a vector to store ordered data:
+For example, clojure has an array-like data structure called a vector to store ordered data:
 
 ```[8 13 3 0 34 89]```
 
-and it has an associative data structure, similar to a javascript object or python dictionary, called a clojure map or hashmap:
+Clojure also has an associative data structure, similar to a javascript object or python dictionary, called a clojure map or hashmap:
 
 ```
 {:a 1
@@ -76,13 +76,13 @@ and it has an associative data structure, similar to a javascript object or pyth
  :c 3}
  ```
     
-while these look familiar to data structures found elsewhere, clojure's data structures contain a hidden strength. they are immutable. pause and let that sink in. in clojure, data never changes. what!?! i know this is weird. but its also incredibly powerful.
+While these look familiar to data structures found elsewhere, clojure's data structures contain a hidden strength. they are immutable. pause and let that sink in. in clojure, data never changes. what!?! i know this is weird. but its also incredibly powerful.
 
-we are entering the territory of functional programming, clojure's wheelhouse. clojure has hundreds of functions (a named operation), dozens of which you will use regularly, which take immutable data as input and return a new piece of immutable data as output.
+We are entering the territory of functional programming, clojure's wheelhouse. clojure has hundreds of functions (a named operation), dozens of which you will use regularly, which take immutable data as input and return a new piece of immutable data as output.
 
-this simple mental model: `old data in, new data out`, describes the fundamental building blocks and way of solving problems in clojure. a chain of one or more functions are chosen based on the need to produce result data from input data, until the final result assumes a shape which accurately satisfies the problem at hand. functions in clojure compose elegantly, allowing a rich `dialogue of intent` between the programmer and clojure. 
+This simple mental model: `old data in, new data out`, describes the fundamental building blocks and way of solving problems in clojure. a chain of one or more functions are chosen based on the need to produce result data from input data, until the final result assumes a shape which accurately satisfies the problem at hand. functions in clojure compose elegantly, allowing a rich `dialogue of intent` between the programmer and clojure. 
 
-we will dig much more deeply into the topic of immutable data early on in this tutorial, but for now the important thing to know is that clojure achieves this technical feat using some smart data-sharing algorithms under the hood and that immutable data eradicates a wide array of common programming pitfalls. it makes programs easier to reason about and illuminates the otherwise hidden interactions between the runtime components of a program. it's hard to over-hype the positive effect this will have on your programming career and the success of your projects. it's the root cause of joy which clojure programmers are renowned to experience upon mastering the clojure way of doing things.
+We will dig much more deeply into the topic of immutable data early on in this tutorial, but for now the important thing to know is that clojure achieves this technical feat using some smart data-sharing algorithms under the hood and that immutable data eradicates a wide array of common programming pitfalls. it makes programs easier to reason about and illuminates the otherwise hidden interactions between the runtime components of a program. it's hard to over-hype the positive effect this will have on your programming career and the success of your projects. it's the root cause of joy which clojure programmers are renowned to experience upon mastering the clojure way of doing things.
 
 ### Clojure is a vision
 
