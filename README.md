@@ -1,6 +1,6 @@
-# Learn Clojure
+# Clojure for All
 
-A curated path toward Clojure mastery.
+A curated path toward Clojure proficiency.
 
 
 ## Welcome!
@@ -152,12 +152,37 @@ As a life-long learner my insatiable curiosity will be occupied for years to com
 
 There's also one significant technical reason I chose Clojure that has to do with databases. Most applications deal with nested data structures or object hierarchies. Object Relational Management layers are used to solve the N+1 problem and stuff nested data into tabular relational databases. I have first hand experience with an expertly built application which required significant alteration of the data model itself to accommodate the needs of the database.
 
-I [wrote more](http://discuss.purelyfunctional.tv/t/jay-martin-clojure-remote-2017-interview/925) about this reason in an online email interview with well-known Clojure educator, Eric Normand of [PurelyFunctional.tv](http://purelyfunctional.tv), if you'd like to dig deeper on the topic.
+I [wrote more](http://discuss.purelyfunctional.tv/t/jay-martin-clojure-remote-2017-interview/925) about this reason in an online email interview with well-known Clojure educator, Eric Normand of [PurelyFunctional.tv](http://purelyfunctional.tv), which I refer you to if you'd like to dig deeper on the topic.
 
 ### Other reasons
 
 There are other lesser reasons, which I will add below as they come to me.
 
-Clojure is web scale out of the box. Clojure has powerful concurrency primitives built-in to the heart of the language. It is unconstrained by a Global Interpreter Lock (GIL), like Ruby and Python are. This isn't a big deal for most new companies, but if you are lucky enough to experience overnight success, perhaps you get selected to go the Oprah show, then you'll be glad you picked Clojure. Most of these web scale issues have to do with architectural issues in addition to language features. A web search for `ruby on rails twitter scaling issues` will list articles which collectively should tell both sides of the story pretty well. Oh, the problems we should have, right!?!
+Clojure is web scale out of the box. Clojure has powerful concurrency primitives built-in to the heart of the language. It is unconstrained by a Global Interpreter Lock (GIL), like Ruby and Python are. This isn't a big deal for most new companies, but if you are lucky enough to experience overnight success, perhaps you get selected to go the Oprah show, then you'll be glad you picked Clojure. Most of these web scale issues have to do with architectural issues in addition to language features. A web search for `twitter scaling issues with ruby on rails` will list articles which collectively should tell both sides of the story pretty well. Oh, the problems we should have, right!?!
 
 (To be continued soon...)
+
+
+## Our online site
+
+The URL for this guide is: TBD.
+
+
+## Other Clojure quick start resources
+
+https://clojure.org/guides/getting_started
+
+http://www.clojurenewbieguide.com/
+
+http://www.unexpected-vortices.com/clojure/brief-beginners-guide/general-overview.html
+
+http://www.learn-clojure.com/clojure_tutorials.html
+
+http://howistart.org/posts/clojure/1/index.html
+
+## Clojure Tutorials
+
+http://writingcoding.blogspot.com/2008/07/stemming-part-8-macros.html
+
+https://objectcomputing.com/resources/publications/sett/march-2009-clojure-functional-programming-for-the-jvm/
+
