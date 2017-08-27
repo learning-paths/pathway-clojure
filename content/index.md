@@ -2,7 +2,6 @@
 
 A curated pathway toward software development proficiency, with Clojure and friends.
 
-
 ## Welcome!
 
 Above all, this guide aims to be a friendly and welcoming place for people of all skill levels to interact around the subject of computer programming.
@@ -15,7 +14,7 @@ Please, imagine this scenario: You, me and maybe one other person have an idea f
 
 I've dedicated myself to finding a way of building software that could leverage just such a small team to build great things and make a positive difference in people's lives. No path is perfect, but having a path is a world above not having one, at least in my experience. I've observed that I'm happier and more productive when I'm on a track, that is to say a defined path with specific learning goals.
 
-Welcome to such a track.
+Welcome to such a track. (Note: The pathway isn't fully documented yet. Please click the "watch" button on [the Site's Github Repo](https://github.com/webappzero/pathway-clojure) to be notified of updates.)
 
 ## Goal & Audience
 
@@ -69,7 +68,7 @@ Clojure is declarative in nature. Ideally, well-written clojure is like having a
 
 ### Clojure is a Lisp
 
-Clojure is a dialect of Lisp, which is short for "list processor". This is Clojure's great superpower, but also the reason behind its inherent learning curve. Fear not! This tutorial, and another a free [online course](https://www.edx.org/course/how-code-simple-data-ubcx-htc1x) we will direct you toward if needed, are designed to take the sting out of learning Lisp.
+Clojure is a dialect of Lisp, which is short for "list processor". This is Clojure's great superpower, but also the reason behind its inherent learning curve. Fear not! This tutorial, and another free [online course](https://www.edx.org/course/how-code-simple-data-ubcx-htc1x) we will direct you toward if needed, are designed to take the sting out of learning Lisp.
 
 Lisp code, Clojure included, is itself a highly consistent and uniform data structure. This makes it possible for mere mortals, like me, to generate and manipulate code programmatically. This is called meta-programming and is the realm of elite programmers in other languages such as Python, Ruby, Java etc. In contrast to these languages, Clojure is *inherently* a programmable programming language, allowing you and your team the power to extend Clojure to suit your needs.
 
@@ -174,6 +173,10 @@ Clojure is web scale out of the box. Clojure has powerful concurrency primitives
 ## Our online site
 
 The URL for this guide is: http://pathwayclojure.org 
+
+## Online REPLs
+
+http://crepl.thegeez.net/
 
 
 ## Other Clojure quick start resources

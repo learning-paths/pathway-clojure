@@ -37,17 +37,8 @@
         (watch)
         (markdown)
         (render :renderer 'site.core/page :out-dir "public")
-        (reload)        
+        (reload)
         (cljs)
         (target)))
 
-(deftask dev2
-  "Another Build for development."
-  []
-  (comp (serve :dir "target/public")
-        (watch)
-        (markdown)
-        (render :renderer 'site.core/page :out-dir "public")
-        (reload)        
-        (cljs)
-        (target)))
+

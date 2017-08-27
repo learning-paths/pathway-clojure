@@ -1,3 +1,2 @@
-{:require [site.core]
+{:require [site.core adzerk.boot-reload.js.main]
  :compiler-options {:asset-path "js/main.out"}}
-
