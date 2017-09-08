@@ -30,19 +30,19 @@ It is a great challenge to write material which is both engaging to experienced 
 
 ### About the Author & Do I need math skills?
 
-My name is Jay Martin. My goal in writing this tutorial is to help others avoid the mistakes I made when first setting about to learn programming. I hope to reach the people who think that Clojure and functional programming is exclusively for 'the really smart programmers' etc. Nonsense! Clojure is for those willing to put in the work to learn it.
+My name is Jay Martin. My goal in writing this tutorial is to help others avoid the mistakes I made when first setting about to learn programming. I hope to reach the people who think that Clojure and functional programming are exclusively for 'the really smart programmers' etc. Not true! Clojure is for those willing to put in the work to learn it.
 
 Learning is a topic I'm keenly interested in. After all, it affects every part of our lives. In my talk, [The Value of Learning](https://youtu.be/aEh5VAfp79A), I lay out two contrasting modes of learning, outside-in versus inside-out. These can be summarized informally by saying: either the crux of the responsibility and action of learning lies in the external environment of the student, i.e. with the University itself, or rather it lies within the individual student. Another way to think of it is whether or not the learning is being imparted to the student or whether the student is the one who is actively assimilating the learning experience.
 
-I believe we can improve both sides of this learning equation by taking a balanced approach. There's a time and place for both modes and we must experiment with the ratio, means and methods among these approaches to find the most effective way to help learners succeed in their learning goals. One area I'd like to focus on throughout this resource is that of reading code. I intend to expose newcomers to the code reading patterns of professional coders. I'm very excited about this idea and believe it has the potential to open up new areas of collaboration and connection between veterans and new recruits.
+I believe we can improve both sides of this learning equation by taking a balanced approach. There's a time and place for both modes and we must experiment with the ratio, means and methods among these approaches to find the most effective way to help learners succeed in their learning goals. One area I'd like to focus on throughout this resource is that of reading code. I intend to expose newcomers to the code reading patterns of professional coders. I'm very excited about this idea and believe it has the potential to open up new areas of collaboration and connection between experienced and new programmers.
 
 If you are willing to try to learn, there is reward enough in the trying to justify your efforts here. It is my experience that anyone can significantly improve their own capacity for learning through the practice and effort of trying. Math is an unforgiving subject. Most of us, myself included get so busy in school that we fail to correct our understanding for that 10% of the material we missed on the exam. The following year, in Algebra II, that 10% becomes 20%, and so on, until the weight of our previous misunderstandings prevent us from even trying. That's normal. We told ourselves we preferred other subjects to math anyway. We shrugged it off by saying "I'm just not a math person".
 
 It's never too late to become a math person! Just ask Dr. Barbara Oakley of [Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn) internet fame. She became technical by _**trying**_.
 
-I'm 47 this year. Over these path three years, studying programming has re-invigorated my intellect and I'm happier than ever thanks to the mental challenge, regular exercise, good sleep routine, and a strong sense of purpose. I want to build things to improve the daily lives of people.
+To bolster my own confidence in Math and fill-in any gaps, I researched at-home math curriculum and purchased [the best Algebra course I could find](http://www.teachingtextbooks.com/). Of course, [Khan Academy](https://www.khanacademy.org/) is another high-quality freely available resource. It's true that many people claim [you don't have to be good at math to learn to code](https://www.theatlantic.com/technology/archive/2015/09/you-dont-have-to-be-good-at-math-to-learn-to-code/403342/), but I also think its good to start practicing a little math every week, because it's such a great way to warm up our problem solving acumen. It also helps when you want to read up on the theories and algorithms that underlie our programming languages and tools. This is completely optional but you just might find that a "take the bull by the horns " approach is motivating for you. If not, you can skip the math for now and pick it up if and when the time feels right in your learning journey. 
 
-To bolster my confidence in Math and fill in any gaps, I researched at-home math curriculum and purchased [the best Algebra course I could find](http://www.teachingtextbooks.com/). Of course, [Khan Academy](https://www.khanacademy.org/) is another high-quality freely available resource. It's true that many people claim [you don't have to be good at math to learn to code](https://www.theatlantic.com/technology/archive/2015/09/you-dont-have-to-be-good-at-math-to-learn-to-code/403342/), but I also think its good to start practicing a little math every week, because it's such a great way to warm up our problem solving acumen. It also helps when you want to read up on the theories and algorithms that underlie our programming languages and tools. This is completely optional but you just might find that a "take the bull by the horns " approach is motivating for you. If not, skip the math for now and pick it if and when the time feels right in your learning journey.
+I'm not an expert programmer. I'm someone who has surveyed the programming landscape in search of a better way of building software. Please balance any advice in this guide by talking with others about why they write software the way they do. 
 
 ### Authorship voice
 
@@ -101,27 +101,33 @@ We are not dealing with zeros and ones, but rather data is helpful to problems w
 
 Clojure provides and a small handful of data types in which to store data that represents information which is meaningful to you. These data types look familiar to those other popular languages, such as JavaScript.
 
-For example, Clojure has an array-like data structure called a ```vector``` to store ordered data:
+For example, Clojure has an array-like data structure called a ```vector```, used to store ordered data. We'll dig deeper into how these data structures work soon. For now, we're working up to making a larger point. Here's an example vector that begins with the number ```8``` and ends with the number ```2```.
 
 ```
-[8 13 3 0 34 89]
+[8 13 3 0 34 2]
 ```
 
-Clojure also has an associative data structure, similar to a javascript object or python dictionary, called a Clojure map, or ```hashmap``` to be precise:
+Clojure also has an *associative* data structure, similar to a javascript object or python dictionary, called a Clojure map, or ```hashmap``` to be precise. In the following hashmap we have three keys ```:a```, ``` :b```, and ```:c``` respectively associated with three values ```1```, ```` 2```, and ```3```.
 
 ```
 {:a 1
  :b 2
  :c 3}
  ```
-    
-While these look familiar to data structures found elsewhere, Clojure's data structures contain a hidden strength. They are immutable. Pause and let that sink in. In Clojure, data never changes. What!?! I know this is weird. Its also incredibly powerful.
+ 
+We can use a hashmap key to lookup the value *associated* with that key within the data structure. We'll show an example soon.
+
+While these look familiar to data structures found elsewhere, Clojure's data structures contain a hidden strength. They are immutable. Pause and let that sink in. In Clojure, data never changes. What!?! This probably sounds weird to you, but it will make more sense as we go along.
 
 We are entering the territory of functional programming, Clojure's wheelhouse. Clojure has hundreds of functions (a named operation), dozens of which you will use regularly, which take immutable data as input and return a new piece of immutable data as output.
 
-This simple mental model: `old data in, new data out`, describes the fundamental building blocks and way of solving problems in Clojure. A chain of one or more functions are chosen based on the need to produce result data from input data, until the final result assumes a shape which accurately satisfies the problem at hand. Functions in Clojure compose elegantly, allowing a rich `dialogue of intent` between the programmer and Clojure. 
+This simple mental model, *old data in, new data out*, describes the *modus operandi* of solving problems in Clojure. A chain of one or more functions are executed based on the need to produce *result data* from *input data*, until the final result assumes a shape which accurately satisfies the problem at hand. Functions in Clojure compose elegantly, allowing a rich `dialogue of intent` between the programmer and Clojure.
 
-We will dig much more deeply into the topic of immutable data early on in this tutorial, but for now the important thing to know is that Clojure achieves this technical feat using some smart data-sharing algorithms under the hood and that immutable data eradicates a wide array of common programming pitfalls. It makes programs easier to reason about and illuminates the otherwise hidden interactions between the runtime components of a program. It's hard to over-hype the positive effect this will have on your programming career and the success of your projects. It's the fountain source of joy which Clojure programmers are renowned to experience upon mastering the Clojure way of doing things.
+"But wait," you ask "don't programs do things besides manipulate data?"
+
+Yes and no. We do use programs to cause things to happen in the world. We call these things `effects`, such printing to screen or printer, writing data to hard drive, sending network traffic, or flying a drone. However, as discussed in the previous section *Clojure is data-centric*, these resources are often represented as data or use data a the `signal` to cause or configure the effects they produce.
+
+We will dig much more deeply into the topic of immutable data early on in this tutorial, but for now the important things to know are that Clojure achieves this technical feat using some smart data-sharing algorithms under the hood and **immutable data eradicates a wide array of common programming pitfalls**. It makes programs easier to reason about and illuminates the otherwise hidden interactions between the runtime components (functions) of a program. It's hard to over-hype the positive effect this will have on your programming career and the success of your projects. It's the fountain source of joy which Clojure programmers are renowned to experience upon mastering the Clojure way of doing things.
 
 ### Clojure is a vision
 
@@ -129,7 +135,7 @@ Clojure is a bit of a paradox. On one hand, it's rock solid in the core function
 
 Clojure isn't shy about borrowing what works. Communicating Sequential Processes (CSP) have been popularized by Google's Go language. Clojure adopted this paradigm via its core.async *library* (a named set of functions). Clojurians have been quick to pick up CSP, but have learned that (in general) its best used at the edge of a system, not at the heart of one. I mention this because I've learned so much more than I ever thought possible because of the brilliant minds in Clojure who freely share their hard earned programming wisdom. 
 
-These professionals aren't doing things the hard way. They are going with the grain of the wood and solving problems in the most natural possible way. It isn't a perfect way. There's are still a few things which can be improved but the work is well underway. The progress early Clojurians have made since its inception in 2007 is staggering! We are truly standing on the shoulder of giants.
+These professionals aren't doing things the hard way. They are going with the grain of the wood and solving problems in the most natural possible way. It isn't a perfect way. There's will always be room for improvement and you can help by sharing your learning experiences with us and Clojure community at large. The progress early Clojurians have made since its inception in 2007 is staggering! We are truly standing on the shoulder of giants.
 
 To me, Clojure represents a vision of a better way of doing things.
 
@@ -163,9 +169,9 @@ I wrote more about this reason in an [online interview](http://discuss.purelyfun
 
 ### Other reasons
 
-There are other lesser reasons, which I will add below as they come to me.
+There are many reasons to use Clojure, so of which may be more or less important to your situation.
 
-Clojure is web scale out of the box. Clojure has powerful concurrency primitives built-in to the heart of the language. It is unconstrained by a Global Interpreter Lock (GIL), like Ruby and Python are. This isn't a big deal for most new companies, but if you are lucky enough to experience overnight success, perhaps you get selected to go the Oprah show, then you'll be glad you picked Clojure. Most of these web scale issues have to do with architectural issues in addition to language features. A web search for `twitter scaling issues with ruby on rails` will list articles which collectively should tell both sides of the story pretty well. Oh, the problems we should have, right!?!
+Clojure is web scale out of the box. Clojure has powerful concurrency primitives built-in to the heart of the language. It is unconstrained by a Global Interpreter Lock (GIL), like Ruby and Python are. This isn't a big deal for most new companies, but if you are lucky enough to experience overnight success, perhaps you get selected to go the Oprah show, then you'll be glad you picked Clojure. Most of these web scale issues have to do with architectural issues in addition to language features. A web search for `twitter scaling issues with ruby on rails` will list articles which should tell both sides of the story pretty well. Oh, the problems we should have, right!?!
 
 (To be continued soon...)
 
@@ -176,12 +182,14 @@ The URL for this guide is: http://pathwayclojure.org
 
 ## Online REPLs
 
-http://crepl.thegeez.net/
+http://app.klipse.tech/
 
 
 ## Other Clojure quick start resources
 
 https://clojure.org/guides/getting_started
+
+https://practicalli.github.io/
 
 http://www.clojurenewbieguide.com/
 
