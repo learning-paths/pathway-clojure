@@ -199,8 +199,20 @@ https://clojure.org/guides/learn/syntax
 https://clojure.org/guides/learn/functions
 
 
+## Writing games in Clojure & ClojureScript
+
+[Zach Oakes - Making Games at Runtime with Clojure](https://youtu.be/0GzzFeS5cMc)
+
+[Clojure in Unity 3D: Functional Video Game Development" by Ramsey Nasser and Tims Gardner](https://youtu.be/tJr_TD1BtF0)
+
+[Timothy Gardner, Ramsey Nasser - Games and 3D Graphics in Arcadia](https://youtu.be/zmmdYyAQhmM)
+
+[Symbolic Assembly: Using Clojure to Meta-program Bytecode - Ramsey Nasser](https://youtu.be/eDad1pvwX34)
+
 
 ## Other Clojure learning resources
+
+[clojureD 2017: "Writing Clojure at Runtime with Nightlight" by Zach Oakes](https://youtu.be/EG5BtBEow24)
 
 https://clojure.org/guides/getting_started
 
