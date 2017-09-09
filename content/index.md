@@ -182,10 +182,25 @@ The URL for this guide is: http://pathwayclojure.org
 
 ## Online REPLs
 
+https://repl.it/languages/clojure
+
 http://app.klipse.tech/
 
 
-## Other Clojure quick start resources
+## Reading Clojure
+
+Here's a [video](https://youtu.be/Ru609Kxfy8A) to help learn to read and write Clojure code.
+
+### links mentioned in video
+https://clojure.org/reference/reader#_reader_forms
+
+https://clojure.org/guides/learn/syntax
+
+https://clojure.org/guides/learn/functions
+
+
+
+## Other Clojure learning resources
 
 https://clojure.org/guides/getting_started
 
@@ -199,10 +214,11 @@ http://www.learn-clojure.com/clojure_tutorials.html
 
 http://howistart.org/posts/clojure/1/index.html
 
-## Clojure Tutorials
-
 http://writingcoding.blogspot.com/2008/07/stemming-part-8-macros.html
 
 https://objectcomputing.com/resources/publications/sett/march-2009-clojure-functional-programming-for-the-jvm/
 
+
 <script src="js/main.js"></script>
+
+
