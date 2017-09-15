@@ -212,6 +212,8 @@ https://clojure.org/guides/learn/functions
 
 ## Other Clojure learning resources
 
+[SICP Distilled](http://www.sicpdistilled.com/)
+
 [clojureD 2017: "Writing Clojure at Runtime with Nightlight" by Zach Oakes](https://youtu.be/EG5BtBEow24)
 
 https://clojure.org/guides/getting_started
@@ -230,6 +232,24 @@ http://writingcoding.blogspot.com/2008/07/stemming-part-8-macros.html
 
 https://objectcomputing.com/resources/publications/sett/march-2009-clojure-functional-programming-for-the-jvm/
 
+
+## Scripting in Clojure & ClojureScript
+
+[Mach](https://youtu.be/wqTxhhvOJng)
+
+## Clojure Web Development 
+
+[Frameworkless Web Development in Clojure by Andreas ‘Kungi’ Klein](https://youtu.be/_LghX4oDWcY)
+
+Duct 
+
+Arachne
+
+Pedestal
+
+Edge
+
+Bidi
 
 <script src="js/main.js"></script>
 
