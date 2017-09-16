@@ -36,9 +36,11 @@ Learning is a topic I'm keenly interested in. After all, it affects every part o
 
 I believe we can improve both sides of this learning equation by taking a balanced approach. There's a time and place for both modes and we must experiment with the ratio, means and methods among these approaches to find the most effective way to help learners succeed in their learning goals. One area I'd like to focus on throughout this resource is that of reading code. I intend to expose newcomers to the code reading patterns of professional coders. I'm very excited about this idea and believe it has the potential to open up new areas of collaboration and connection between experienced and new programmers.
 
+I highly recommend the course 
+
 If you are willing to try to learn, there is reward enough in the trying to justify your efforts here. It is my experience that anyone can significantly improve their own capacity for learning through the practice and effort of trying. Math is an unforgiving subject. Most of us, myself included get so busy in school that we fail to correct our understanding for that 10% of the material we missed on the exam. The following year, in Algebra II, that 10% becomes 20%, and so on, until the weight of our previous misunderstandings prevent us from even trying. That's normal. We told ourselves we preferred other subjects to math anyway. We shrugged it off by saying "I'm just not a math person".
 
-It's never too late to become a math person! Just ask Dr. Barbara Oakley of [Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn) internet fame. She became technical by _**trying**_.
+It's never too late to become a math person! Just ask Dr. Barbara Oakley of [Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn) internet fame. She became technical by _**trying**_. I highly recommend taking her course, but if you're short on free time, please at least read [Techniques for Efficiently Learning Programming Languages](http://www.flyingmachinestudios.com/programming/learn-programming-languages-efficiently/) by Daniel Higginbotham.
 
 To bolster my own confidence in Math and fill-in any gaps, I researched at-home math curriculum and purchased [the best Algebra course I could find](http://www.teachingtextbooks.com/). Of course, [Khan Academy](https://www.khanacademy.org/) is another high-quality freely available resource. It's true that many people claim [you don't have to be good at math to learn to code](https://www.theatlantic.com/technology/archive/2015/09/you-dont-have-to-be-good-at-math-to-learn-to-code/403342/), but I also think its good to start practicing a little math every week, because it's such a great way to warm up our problem solving acumen. It also helps when you want to read up on the theories and algorithms that underlie our programming languages and tools. This is completely optional but you just might find that a "take the bull by the horns " approach is motivating for you. If not, you can skip the math for now and pick it up if and when the time feels right in your learning journey. 
 
@@ -57,14 +59,21 @@ Clojure's official [website](https://clojure.org/) provides this concise answer:
 
 I think of Clojure as _**a way of building software**_ that is uniquely facilitated by Clojure's novel design. Clojure is the brainchild of Rich Hickey, who dedicated years of thoughtful design to bring a trifecta of harmonious programming artifacts into the world. These are Clojure, [ClojureScript](https://clojurescript.org/), and [Datomic](http://www.datomic.com/).
 
-Clojure runs on top of the Java Virtual Machine (JVM), itself an industrial grade computing platform.
+Clojure runs on top of the Java Virtual Machine (JVM), itself an industrial grade computing platform. The JVM is a massively popular compilation target. This means that almost all popular languages such as Ruby and Python have variants that run on the JVM, thus allowing your Clojure code to inter-operate with any available Java, Ruby, Python software.
 
-ClojureScript brings Clojure's strengths to web development, and anywhere else that JavaScript runs.
+Another variant of Clojure, [Clojure CLR](https://clojure.org/about/clojureclr), runs atop the Common Language Runtime (CLR), on which Microsoft's .NET technologies such C# run. The CLR and JVM host the vast majority of modern business and enterprise software applications in existence today. This is unlikely to change any time soon and when it does the most likely candidate to unseat these two behemoths will the web's darling language, JavaScript. Clojure is ready for that change too.
+
+ClojureScript brings Clojure's strengths to web development, both in the Web Browser and in Node.js, a massively popular JavaScript platform which derives its power from the ever-growing and freely available 475,000 Open Source software application which service as convenient building blocks in the JavaScript ecosystem.
 
 The Datomic database allows database queries to be written by a wider swath of the population because these queries are structured the way people think, not around the needs of the computer. Not many programming languages can claim to share design continuity with any database, much less one of Datomic's caliber.
 
-Clojure is declarative in nature. Ideally, well-written clojure is like having a conversation about what we need from the computer, generally some form of information processing. Let me qualify that statement by being candid with you. In order for you to be a proficient conversationalist in clojure will likely take two years of practice, several days per week. The effort is justified in the additional power and capability you will have as a Clojure programmer above and beyond what you could do in another language in twice that amount of time or more, if ever.
+Clojure's broad reach and power are limited only by our individual and collective creativity. Defining Clojure is a bit like trying to answer the question, "What is Music?" The answer really depends on *You*. 
 
+### Clojure is General 
+
+**Clojure is a general language**. It can be used to write any software otherwise written in any of these other languages mentioned above, but in a more uniform and sound manner, thus improving reliability and ease maintenance, which ultimately drives down costs. Clojure's general nature means that there are several different ways of accomplishing your goals. I recommend that you choose a problem you want to solve, ask help from our helpful community, and follow your nose to use Clojure to solve your specific problem. This will help you discover the unique way in which Clojure can improve your life.
+
+Clojure is declarative in nature. Ideally, well-written clojure is like having a conversation about what we need from the computer, generally some form of information processing. Let me qualify that statement by being candid with you. In order for you to be a proficient conversationalist in clojure will likely take two years of practice, several days per week. The effort is justified in the additional power and capability you will have as a Clojure programmer above and beyond what you could do in another language in twice that amount of time or more, if ever.
 
 ### Clojure is a Lisp
 
@@ -97,7 +106,7 @@ Transforming data from one shape and form to another is the primary task of a pr
 
 There are many layers of building blocks, stacked one on top of the other, all the way down to zeros and ones. These layers of abstraction allow [higher level languages](http://www.nand2tetris.org/lectures/pdf/lecture%2009%20high%20level%20language.pdf), like Clojure, to faciliate higher-level thinking in the mind of the programmer.
 
-We are not dealing with zeros and ones, but rather data is helpful to problems we have at hand.
+We are not dealing with zeros and ones, but rather data and operations that are helpful to problem at hand.
 
 Clojure provides and a small handful of data types in which to store data that represents information which is meaningful to you. These data types look familiar to those other popular languages, such as JavaScript.
 
@@ -173,9 +182,6 @@ There are many reasons to use Clojure, so of which may be more or less important
 
 Clojure is web scale out of the box. Clojure has powerful concurrency primitives built-in to the heart of the language. It is unconstrained by a Global Interpreter Lock (GIL), like Ruby and Python are. This isn't a big deal for most new companies, but if you are lucky enough to experience overnight success, perhaps you get selected to go the Oprah show, then you'll be glad you picked Clojure. Most of these web scale issues have to do with architectural issues in addition to language features. A web search for `twitter scaling issues with ruby on rails` will list articles which should tell both sides of the story pretty well. Oh, the problems we should have, right!?!
 
-(To be continued soon...)
-
-
 ## Our online site
 
 The URL for this guide is: http://pathwayclojure.org 
@@ -199,6 +205,13 @@ https://clojure.org/guides/learn/syntax
 https://clojure.org/guides/learn/functions
 
 
+## Running Clojure Code
+
+[Running Clojure Code Guide](running-clojure-code.md)
+
+
+
+
 ## Writing games in Clojure & ClojureScript
 
 [Zach Oakes - Making Games at Runtime with Clojure](https://youtu.be/0GzzFeS5cMc)
@@ -211,6 +224,8 @@ https://clojure.org/guides/learn/functions
 
 
 ## Other Clojure learning resources
+
+[Maria Cloud: A gentle introduction to a subset and alternative set of Clojure online](https://www.maria.cloud/)
 
 [SICP Distilled](http://www.sicpdistilled.com/)
 
@@ -230,8 +245,8 @@ http://howistart.org/posts/clojure/1/index.html
 
 http://writingcoding.blogspot.com/2008/07/stemming-part-8-macros.html
 
-https://objectcomputing.com/resources/publications/sett/march-2009-clojure-functional-programming-for-the-jvm/
-
+Good resource for more intermediate to advanced programmers:
+[CLOJURE - FUNCTIONAL PROGRAMMING FOR THE JVM](https://objectcomputing.com/resources/publications/sett/march-2009-clojure-functional-programming-for-the-jvm/)
 
 ## Scripting in Clojure & ClojureScript
 
