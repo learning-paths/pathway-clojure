@@ -1,3 +1,10 @@
+---
+layout: post
+category: howto
+date-published: 2017-09-16
+title: Running Clojure Code
+---
+
 # Running Clojure Code
 
 There are several ways to run or execute Clojure code because Clojure runs in various contexts, e.g. the JVM, the CLR, the Browser, and Node.js.
@@ -30,5 +37,7 @@ https://clojure.org/about/jvm_hosted
 
 [A Brief Beginner's Guide To Clojure, General Overview](http://www.unexpected-vortices.com/clojure/brief-beginners-guide/general-overview.html#some-info-about-java)
 
-
+Quote from Clojurians Slack user noisesmith: another fun trick is that you can run your uberjar to get a repl that can use all of your deps and namespaces
+`java -cp my.uber.jar clojure.main` - optionally `rlwrap java -cp my.uber.jar clojure.main` on a *nix to get command line editing and history too
+in a pinch I've used this to speed up debugging issues on remote servers
 
