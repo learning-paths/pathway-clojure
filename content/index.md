@@ -207,7 +207,7 @@ https://clojure.org/guides/learn/functions
 
 ## Running Clojure Code
 
-[Running Clojure Code Guide](running-clojure-code.html)
+[Running Clojure Code Guide](/running-clojure-code.html)
 
 ## Writing games in Clojure & ClojureScript
 
