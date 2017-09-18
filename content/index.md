@@ -69,7 +69,7 @@ The Datomic database allows database queries to be written by a wider swath of t
 
 Clojure's broad reach and power are limited only by our individual and collective creativity. Defining Clojure is a bit like trying to answer the question, "What is Music?" The answer really depends on *You*. 
 
-### Clojure is General 
+### Clojure is multi-purpose 
 
 **Clojure is a general language**. It can be used to write any software otherwise written in any of these other languages mentioned above, but in a more uniform and sound manner, thus improving reliability and ease maintenance, which ultimately drives down costs. Clojure's general nature means that there are several different ways of accomplishing your goals. I recommend that you choose a problem you want to solve, ask help from our helpful community, and follow your nose to use Clojure to solve your specific problem. This will help you discover the unique way in which Clojure can improve your life.
 

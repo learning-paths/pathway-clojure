@@ -3,3 +3,4 @@ docs/build
 target/adzerk
 target/js/main.out
 /.nrepl-port
+/.nrepl-history
