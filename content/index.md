@@ -204,10 +204,71 @@ https://clojure.org/guides/learn/syntax
 
 https://clojure.org/guides/learn/functions
 
+## Command-Line Quick Start
+
+Your computer system comes with a command-line application where you can enter text based instructions to control its basic operations. Learning to create, rename, edit, delete and move files and directories on our system from the command line (aka shell, terminal, console, bash prompt etc.) is an important skill to learn and will help you successfully follow along with this and other online tutorials.
+
+If you are a Windows user, please install and use [Babun](http://babun.github.io/) to get setup with zsh and bash, two compatible and popular shell programs. This will give you practice with Linux style shells which you will encounter when deploying your web application to a server.
+
+For all users, we recommend installing the program [trash](https://github.com/sindresorhus/trash), a program which you use instead of `rm` to avoid accidentally and permanently deleting important files. You may need to command-line training before you're comfortable installing trash.
+
+If you're new to the command line, we recommend the [Introduction to the command-line interface](https://tutorial.djangogirls.org/en/intro_to_command_line/) because each command is illustrated for each platform. If you're a Windows user with Babun installed, you can follow the Linux examples.
+
+### Use Bash or Zsh
+
+Bash and Zsh are highly inter-operable shells. Bash is installed on all servers. Zsh isn't often installed by default but is more powerful and slick. 
+
+Wes Bos offers a free command-line video course about Zsh called [Command Line Power User](https://commandlinepoweruser.com/).
+
+I happen to use Zsh. Please use either Bash or Zsh when following along with this tutorial.
+
+### Other command-line resources
+
+[The Linux Command Line](http://linuxcommand.org/tlcl.php)
+
+[From Bash to Zsh](https://www.amazon.com/Bash-Shell-Conquering-Command-Line/dp/1590593766)
+
+[https://www.gnu.org/software/bash/](https://www.gnu.org/software/bash/)
+
+
 
 ## Running Clojure Code
 
-[Running Clojure Code Guide](/running-clojure-code.html)
+There are several ways to run or execute Clojure code because Clojure runs in various contexts, e.g. the JVM, the CLR, the Browser, and Node.js.
+
+This section seeks to explore and discover these various methods of code execution and ultimately help determine which method is best suited for which objectives. However, let's keep things simple at first and build up from there.
+
+Tutorial pre-requisite: Below we run shell commands. If you're not familiar with the running commands from your system's shell or terminal (or is you're a Windows user), please first read the section [Command Line Quick Start](#command-line-quick-start).
+
+
+### Clojure on the JVM
+
+#### Fundamentals
+
+The fact that Clojure runs on the JVM is the biggest reason why enterprises such as Walmart and Staples adopted this relatively young language. Clojure doesn't concern itself with Garbage Collection (cleaning up stale memory resources) or other low-level concerns, leaving these to the JVM, which you can think of as like a computer inside your computer. This additional level of abstraction allows your programs to be *portable*, i.e. to run on completely different operating systems such as MacOS, Windows, and Linux to name a few.
+
+Clojure is a program which runs on the JVM. The Clojure program is used to evaluate Clojure code. That evaluation process can be short lived or ongoing.
+
+First let's examine a short-lived example of Clojure code execution. Open
+
+
+
+
+
+
+Further Resources:
+
+https://clojure.org/about/dynamic
+
+https://clojure.org/about/jvm_hosted
+
+[A Brief Beginner's Guide To Clojure, General Overview](http://www.unexpected-vortices.com/clojure/brief-beginners-guide/general-overview.html#some-info-about-java)
+
+Quote from Clojurians Slack user noisesmith: another fun trick is that you can run your uberjar to get a repl that can use all of your deps and namespaces
+`java -cp my.uber.jar clojure.main` - optionally `rlwrap java -cp my.uber.jar clojure.main` on a *nix to get command line editing and history too
+in a pinch I've used this to speed up debugging issues on remote servers
+
+
 
 ## Writing games in Clojure & ClojureScript
 
