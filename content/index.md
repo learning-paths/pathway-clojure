@@ -94,7 +94,7 @@ Data is used to *represent* information from our human world inside the digital 
 
 As you observe the world through your human eye, a massive amount of *information* regarding color is received by the brain through the input channel of your optic nerve. That amount of information is too vast for the average computer to process efficiently so computer programmers devised a way to represent color using a simple three letter system, [rgb](https://foldoc.org/rgb). Each letter can be set to a value between 0 and 255. In this way, the computer uses data such as ```0 0 255``` to closely approximate, or _represent_, the color as it appears in the world, in this case blue. When the computer encounters rgb data, it is programmed  to *interpret* such data as color (information) so that it may display color on the screen.
 
-Humans have been milking things down to their essence way before computers ever existed. The notches on the [lebombo bone](https://en.wikipedia.org/wiki/lebombo_bone) were likely used to represent days, while the bone in its entirety was likely used to represent a lunar cycle. Time is a very abstract thing, but the moon passing by is less abstract. Notches on a bone are a concrete, unchanging representation of one of natures most mysterious aspects, time.
+Humans have been milking things down to their essence way before computers ever existed. The notches on the [lebombo bone](https://en.wikipedia.org/wiki/lebombo_bone) were likely used to represent days, while the bone in its entirety was likely used to represent a lunar cycle. Time is a very abstract thing, but the moon passing by is less abstract. Notches on a bone are a concrete, unchanging representation of one of nature's most mysterious aspects, time.
 
 In the same way that notches on a bone help to model time in an understandable way, data is a powerful tool for modeling abstract things in a more tangible, more real, more understandable way. Data in the realm of the computer is the closest thing we have to a pure truth. If I give you the data ```0 0 255```, then you have the data as it is. Does that mean I've given your the color blue? No. It's just three numbers. That's all it is. I might hint at my intentions as the sender of this data by sending you three letters and three numbers, in the form of ```rgb 0 0 255```. Even still, we just have three letters and three numbers. It's possible that rgb means something different to me or you. We could still choose to interpret that data in any way we choose.
 
@@ -238,7 +238,7 @@ There are several ways to run or execute Clojure code because Clojure runs in va
 
 This section seeks to explore and discover these various methods of code execution and ultimately help determine which method is best suited for which objectives. However, let's keep things simple at first and build up from there.
 
-Tutorial pre-requisite: Below we run shell commands. If you're not familiar with the running commands from your system's shell or terminal (or is you're a Windows user), please first read the section [Command Line Quick Start](#command-line-quick-start).
+Tutorial pre-requisite: Below we run shell commands. If you're not familiar with the running commands from your system's shell or terminal (or if you're a Windows user), please first read the section [Command Line Quick Start](#command-line-quick-start).
 
 
 ### Clojure on the JVM
@@ -249,7 +249,55 @@ The fact that Clojure runs on the JVM is the biggest reason why enterprises such
 
 Clojure is a program which runs on the JVM. The Clojure program is used to evaluate Clojure code. That evaluation process can be short lived or ongoing.
 
-First let's examine a short-lived example of Clojure code execution. Open
+First let's examine a short-lived example of Clojure code execution. Open your system's command line and execute the following steps:
+
+##### Step 1: Make a directory called `runclj`:
+
+```mkdir runclj```
+
+##### Step 2: Change current directory to `runclj`:
+
+```cd runclj```
+
+##### Step 3: Download `clojure-1.9.0-beta1.jar` and place it in the `runclj` directory:
+
+>Note: If you have `wget` or `curl`, you can download the Clojure jar using either command or you can click on [this download link](https://repo1.maven.org/maven2/org/clojure/clojure/1.9.0-beta1/clojure-1.9.0-beta1.jar) and direct the download to the `runclj` when prompted. If executing the command-line: `which wget` returns nothing, then `wget` is not installed. Likewise for `curl`.
+
+```wget https://repo1.maven.org/maven2/org/clojure/clojure/1.9.0-beta1/clojure-1.9.0-beta1.jar```
+
+--or-- 
+
+```curl -O https://repo1.maven.org/maven2/org/clojure/clojure/1.9.0-beta1/clojure-1.9.0-beta1.jar```
+
+
+> Note: In the future, you won't typically need to download Clojure manually, but if you do Clojure releases can be found here:
+> https://clojure.org/community/downloads
+
+
+##### Step 4: Create file named `howdy.clj`:
+
+```touch howdy.clj```
+
+##### Step 5: Populate file with some Clojure code (plain text):
+
+Open the file `howdy.clj` with your system's default text editor:
+
+```open howdy.clj```
+
+Then type in the following text and save the file:
+
+```(println "Howdy, world")```
+
+--or--
+
+Populate the file from the command line:
+
+```echo (println \"Howdy, world\") > howdy.clj```
+
+> Note: The command line just above escapes the quote marks with a backslash character just before each double quote character so that the echo command won't interpret them for itself, and will instead pass them on as data.
+
+
+
 
 
 
@@ -268,7 +316,9 @@ Quote from Clojurians Slack user noisesmith: another fun trick is that you can r
 `java -cp my.uber.jar clojure.main` - optionally `rlwrap java -cp my.uber.jar clojure.main` on a *nix to get command line editing and history too
 in a pinch I've used this to speed up debugging issues on remote servers
 
+[Using curl and wget](http://www.thegeekstuff.com/2012/07/wget-curl)
 
+[curl vs wget](https://daniel.haxx.se/docs/curl-vs-wget.html)
 
 ## Writing games in Clojure & ClojureScript
 
