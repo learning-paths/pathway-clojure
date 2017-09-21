@@ -292,9 +292,11 @@ Then type in the following text and save the file:
 
 Populate the file from the command line:
 
-```echo (println \"Howdy, world\") > howdy.clj```
+```echo "(println \"Howdy, world\")" > howdy.clj```
 
-> Note: The command line just above escapes the quote marks with a backslash character just before each double quote character so that the echo command won't interpret them for itself, and will instead pass them on as data.
+> Note: The command line above *escapes* some quote marks with a backslash character just before the double quote character so that the echo command won't interpret that character for itself, and will instead treat it as ordinary data, just like the rest of the text, except for the two unquoted quotation marks. For a deeper dive into this topic, see [this page](http://wiki.bash-hackers.org/syntax/quoting).
+
+
 
 
 

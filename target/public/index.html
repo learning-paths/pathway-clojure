@@ -52,7 +52,7 @@
 <p>Rich Hickey, in his seminal talk <em><a href="https://www.infoq.com/presentations/simple-made-easy">Simple Made Easy</a></em>, observes that reliable modern software systems communicate with each other by sending and receiving data. Ironically, many programming languages and paradigms, such as Java and certain flavors of object orientation, attempt to bury data deep within the myriad building blocks of their programs. In contrast, Clojure liberates data. It elevates data front-and-center, thus increasing the reliability of systems written in Clojure.</p>
 <p>Data is used to <em>represent</em> information from our human world inside the digital realm. We then <em>interpret</em> that data as information to make observations, decisions, or to guide further interaction with the machine world. This talk of data and information may seem confusing at first. After all, what's the difference? A concrete example might help.</p>
 <p>As you observe the world through your human eye, a massive amount of <em>information</em> regarding color is received by the brain through the input channel of your optic nerve. That amount of information is too vast for the average computer to process efficiently so computer programmers devised a way to represent color using a simple three letter system, <a href="https://foldoc.org/rgb">rgb</a>. Each letter can be set to a value between 0 and 255. In this way, the computer uses data such as <code>0 0 255</code> to closely approximate, or <em>represent</em>, the color as it appears in the world, in this case blue. When the computer encounters rgb data, it is programmed to <em>interpret</em> such data as color (information) so that it may display color on the screen.</p>
-<p>Humans have been milking things down to their essence way before computers ever existed. The notches on the <a href="https://en.wikipedia.org/wiki/lebombo_bone">lebombo bone</a> were likely used to represent days, while the bone in its entirety was likely used to represent a lunar cycle. Time is a very abstract thing, but the moon passing by is less abstract. Notches on a bone are a concrete, unchanging representation of one of natures most mysterious aspects, time.</p>
+<p>Humans have been milking things down to their essence way before computers ever existed. The notches on the <a href="https://en.wikipedia.org/wiki/lebombo_bone">lebombo bone</a> were likely used to represent days, while the bone in its entirety was likely used to represent a lunar cycle. Time is a very abstract thing, but the moon passing by is less abstract. Notches on a bone are a concrete, unchanging representation of one of nature's most mysterious aspects, time.</p>
 <p>In the same way that notches on a bone help to model time in an understandable way, data is a powerful tool for modeling abstract things in a more tangible, more real, more understandable way. Data in the realm of the computer is the closest thing we have to a pure truth. If I give you the data <code>0 0 255</code>, then you have the data as it is. Does that mean I've given your the color blue? No. It's just three numbers. That's all it is. I might hint at my intentions as the sender of this data by sending you three letters and three numbers, in the form of <code>rgb 0 0 255</code>. Even still, we just have three letters and three numbers. It's possible that rgb means something different to me or you. We could still choose to interpret that data in any way we choose.</p>
 <p>This brings us to the topic of self-describing data. Wouldn't it be nice for data to exist with its own meaning embedded within itself, eliminating ambiguity and fulfilling its potential as pure truth within our software systems? Clojure data, and even the <strong>code</strong> you write in Clojure, is based on a data format called extensible data notation which allows you to send self-describing data over the wire or between software processes. This is in stark contrast to widespread industry standard data formats, such as <a href="https://foldoc.org/json">JSON</a>.</p>
 <h3><a href="#clojure-excels-at-data-manipulation" name="clojure-excels-at-data-manipulation"></a>Clojure excels at data manipulation</h3>
@@ -64,78 +64,173 @@
 <pre><code>[8 13 3 0 34 2]
 </code></pre>
 <p>Clojure also has an <em>associative</em> data structure, similar to a javascript object or python dictionary, called a Clojure map, or <code>hashmap</code> to be precise. In the following hashmap we have three keys <code>:a</code>, <code>:b</code>, and <code>:c</code> respectively associated with three values <code>1</code>, `<code>2</code>, and <code>3</code>.</p>
-<p><code>
-{:a 1
+<pre><code>{:a 1
  :b 2
  :c 3}
-</code></p>
-<p>We can use a hashmap key to lookup the value <em>associated</em> with that key within the data structure. We'll show an example soon.</p>
-<p>While these look familiar to data structures found elsewhere, Clojure's data structures contain a hidden strength. They are immutable. Pause and let that sink in. In Clojure, data never changes. What!?! This probably sounds weird to you, but it will make more sense as we go along.</p>
-<p>We are entering the territory of functional programming, Clojure's wheelhouse. Clojure has hundreds of functions (a named operation), dozens of which you will use regularly, which take immutable data as input and return a new piece of immutable data as output.</p>
-<p>This simple mental model, <em>old data in, new data out</em>, describes the <em>modus operandi</em> of solving problems in Clojure. A chain of one or more functions are executed based on the need to produce <em>result data</em> from <em>input data</em>, until the final result assumes a shape which accurately satisfies the problem at hand. Functions in Clojure compose elegantly, allowing a rich <code>dialogue of intent</code> between the programmer and Clojure.</p>
-<p>"But wait," you ask "don't programs do things besides manipulate data?"</p>
-<p>Yes and no. We do use programs to cause things to happen in the world. We call these things <code>effects</code>, such printing to screen or printer, writing data to hard drive, sending network traffic, or flying a drone. However, as discussed in the previous section <em>Clojure is data-centric</em>, these resources are often represented as data or use data a the <code>signal</code> to cause or configure the effects they produce.</p>
-<p>We will dig much more deeply into the topic of immutable data early on in this tutorial, but for now the important things to know are that Clojure achieves this technical feat using some smart data-sharing algorithms under the hood and <strong>immutable data eradicates a wide array of common programming pitfalls</strong>. It makes programs easier to reason about and illuminates the otherwise hidden interactions between the runtime components (functions) of a program. It's hard to over-hype the positive effect this will have on your programming career and the success of your projects. It's the fountain source of joy which Clojure programmers are renowned to experience upon mastering the Clojure way of doing things.</p>
-<h3><a href="#clojure-is-a-vision" name="clojure-is-a-vision"></a>Clojure is a vision</h3>
-<p>Clojure is a bit of a paradox. On one hand, it's rock solid in the core functionality it provides. On the other, Clojure continues to innovate new language features and delight its users with novel, immensely powerful functionality. Most notably, <a href="https://clojure.org/about/spec">Clojure Spec</a> was recently introduced which provides an à la carte data specification system that brings the power of static types but with much greater agility for the programmer.</p>
-<p>Clojure isn't shy about borrowing what works. Communicating Sequential Processes (CSP) have been popularized by Google's Go language. Clojure adopted this paradigm via its core.async <em>library</em> (a named set of functions). Clojurians have been quick to pick up CSP, but have learned that (in general) its best used at the edge of a system, not at the heart of one. I mention this because I've learned so much more than I ever thought possible because of the brilliant minds in Clojure who freely share their hard earned programming wisdom. </p>
-<p>These professionals aren't doing things the hard way. They are going with the grain of the wood and solving problems in the most natural possible way. It isn't a perfect way. There's will always be room for improvement and you can help by sharing your learning experiences with us and Clojure community at large. The progress early Clojurians have made since its inception in 2007 is staggering! We are truly standing on the shoulder of giants.</p>
-<p>To me, Clojure represents a vision of a better way of doing things.</p>
-<h3><a href="#clojure-is-a-community" name="clojure-is-a-community"></a>Clojure is a community</h3>
-<p>It's also important to note that Clojure is a group effort. There is a vibrant and flourishing <a href="https://clojure.org/community/success_stories">community</a> of highly competent people eager to help you succeed in your programming goals. Clojure and ClojureScript are Open Source and freely available for you to use to create robust software solutions.</p>
-<p>Clojure is a fast growing group of people who work diligently to continuously improve the state-of-the-art in software development.</p>
-<p>Clojure has many groups, Slack Channels, IRC channels, and forum's, including one I created: <a href="http://discuss.thevalueoflearning.org/">http://discuss.thevalueoflearning.org/</a></p>
-<p>You will be readily welcomed anywhere you happen to plug into the community online or at an in-person event, such a <a href="https://dev.clojure.org/display/community/Clojure+User+Groups">user group meeting</a>.</p>
-<h2><a href="#why-learn-clojure-" name="why-learn-clojure-"></a>Why learn Clojure?</h2>
-<p>I can't answer this question for you. That would be too presumptive of me. But I can tell you why I chose Clojure.</p>
-<p>In a nutshell, Clojure ticks two major boxes for me.</p>
-<p>First and foremost, Clojure is highly practical. Rick Hickey has focused the language strongly around creating business value. There's a recent <a href="https://youtu.be/3y7xzH8jB8A">success story</a> about an Indonesian company that has experienced a 500% increase in their feature release productivity after switching from Go to Clojure. I love stories like these! I intend to use Clojure pervasively in my businesses. Clojure is general enough that I could pivot my business in practically any direction and still use Clojure to build on. </p>
-<p>Secondly, Clojure opens up a world of learning and exploration above and beyond what I experienced in other languages. Perhaps this has a lot to do with where I was in my learning journey at the time, but I'm convinced that there really is something uniquely special about the ideas I'm being exposed to in this community. </p>
-<p>As a life-long learner my insatiable curiosity will be occupied for years to come. Paradoxically, <a href="https://8thlight.com/blog/colin-jones/2016/10/06/clojure-is-boring.html">Clojure is boring</a>, and that's a good thing!</p>
-<h3><a href="#a-technical-reason" name="a-technical-reason"></a>A technical reason</h3>
-<p>There's also one significant technical reason I chose Clojure that has to do with databases. Most applications deal with nested data structures or object hierarchies. Object Relational Management layers are used to solve the N+1 problem and stuff nested data into tabular relational databases. I have first hand experience with an expertly built application which required significant alteration of the data model itself to accommodate the needs of the database.</p>
-<p>I wrote more about this reason in an <a href="http://discuss.purelyfunctional.tv/t/jay-martin-clojure-remote-2017-interview/925">online interview</a> with well-known Clojure educator, Eric Normand of <a href="http://purelyfunctional.tv">PurelyFunctional.tv</a>, which I refer you to if you'd like to dig deeper on the topic.</p>
-<h3><a href="#other-reasons" name="other-reasons"></a>Other reasons</h3>
-<p>There are many reasons to use Clojure, so of which may be more or less important to your situation.</p>
-<p>Clojure is web scale out of the box. Clojure has powerful concurrency primitives built-in to the heart of the language. It is unconstrained by a Global Interpreter Lock (GIL), like Ruby and Python are. This isn't a big deal for most new companies, but if you are lucky enough to experience overnight success, perhaps you get selected to go the Oprah show, then you'll be glad you picked Clojure. Most of these web scale issues have to do with architectural issues in addition to language features. A web search for <code>twitter scaling issues with ruby on rails</code> will list articles which should tell both sides of the story pretty well. Oh, the problems we should have, right!?!</p>
-<h2><a href="#our-online-site" name="our-online-site"></a>Our online site</h2>
-<p>The URL for this guide is: <a href="http://pathwayclojure.org">http://pathwayclojure.org</a> </p>
-<h2><a href="#online-repls" name="online-repls"></a>Online REPLs</h2>
-<p><a href="https://repl.it/languages/clojure">https://repl.it/languages/clojure</a></p>
-<p><a href="http://app.klipse.tech/">http://app.klipse.tech/</a></p>
-<h2><a href="#reading-clojure" name="reading-clojure"></a>Reading Clojure</h2>
-<p>Here's a <a href="https://youtu.be/Ru609Kxfy8A">video</a> to help learn to read and write Clojure code.</p>
-<h3><a href="#links-mentioned-in-video" name="links-mentioned-in-video"></a>links mentioned in video</h3>
-<p><a href="https://clojure.org/reference/reader#_reader_forms">https://clojure.org/reference/reader#_reader_forms</a></p>
-<p><a href="https://clojure.org/guides/learn/syntax">https://clojure.org/guides/learn/syntax</a></p>
-<p><a href="https://clojure.org/guides/learn/functions">https://clojure.org/guides/learn/functions</a></p>
-<h2><a href="#command-line-quick-start" name="command-line-quick-start"></a>Command-Line Quick Start</h2>
-<p>Your computer system comes with a command-line application where you can enter text based instructions to control its basic operations. Learning to create, rename, edit, delete and move files and directories on our system from the command line (aka shell, terminal, console, bash prompt etc.) is an important skill to learn and will help you successfully follow along with this and other online tutorials.</p>
-<p>If you are a Windows user, please install and use <a href="http://babun.github.io/">Babun</a> to get setup with zsh and bash, two compatible and popular shell programs. This will give you practice with Linux style shells which you will encounter when deploying your web application to a server.</p>
-<p>For all users, we recommend installing the program <a href="https://github.com/sindresorhus/trash">trash</a>, a program which you use instead of <code>rm</code> to avoid accidentally and permanently deleting important files. You may need to command-line training before you're comfortable installing trash.</p>
-<p>If you're new to the command line, we recommend the <a href="https://tutorial.djangogirls.org/en/intro_to_command_line/">Introduction to the command-line interface</a> because each command is illustrated for each platform. If you're a Windows user with Babun installed, you can follow the Linux examples.</p>
-<h3><a href="#use-bash-or-zsh" name="use-bash-or-zsh"></a>Use Bash or Zsh</h3>
-<p>Bash and Zsh are highly inter-operable shells. Bash is installed on all servers. Zsh isn't often installed by default but is more powerful and slick. </p>
-<p>Wes Bos offers a free command-line video course about Zsh called <a href="https://commandlinepoweruser.com/">Command Line Power User</a>.</p>
-<p>I happen to use Zsh. Please use either Bash or Zsh when following along with this tutorial.</p>
-<h3><a href="#other-command-line-resources" name="other-command-line-resources"></a>Other command-line resources</h3>
-<p><a href="http://linuxcommand.org/tlcl.php">The Linux Command Line</a></p>
-<p><a href="https://www.amazon.com/Bash-Shell-Conquering-Command-Line/dp/1590593766">From Bash to Zsh</a></p>
-<p><a href="https://www.gnu.org/software/bash/">https://www.gnu.org/software/bash/</a></p>
-<h2><a href="#running-clojure-code" name="running-clojure-code"></a>Running Clojure Code</h2>
-<p>There are several ways to run or execute Clojure code because Clojure runs in various contexts, e.g. the JVM, the CLR, the Browser, and Node.js.</p>
-<p>This section seeks to explore and discover these various methods of code execution and ultimately help determine which method is best suited for which objectives. However, let's keep things simple at first and build up from there.</p>
-<p>Tutorial pre-requisite: Below we run shell commands. If you're not familiar with the running commands from your system's shell or terminal (or is you're a Windows user), please first read the section <a href="#command-line-quick-start">Command Line Quick Start</a>.</p>
-<h3><a href="#clojure-on-the-jvm" name="clojure-on-the-jvm"></a>Clojure on the JVM</h3>
-<h4><a href="#fundamentals" name="fundamentals"></a>Fundamentals</h4>
-<p>The fact that Clojure runs on the JVM is the biggest reason why enterprises such as Walmart and Staples adopted this relatively young language. Clojure doesn't concern itself with Garbage Collection (cleaning up stale memory resources) or other low-level concerns, leaving these to the JVM, which you can think of as like a computer inside your computer. This additional level of abstraction allows your programs to be <em>portable</em>, i.e. to run on completely different operating systems such as MacOS, Windows, and Linux to name a few.</p>
-<p>Clojure is a program which runs on the JVM. The Clojure program is used to evaluate Clojure code. That evaluation process can be short lived or ongoing.</p>
-<p>First let's examine a short-lived example of Clojure code execution. Open</p>
+ ```
+ 
+We can use a hashmap key to lookup the value *associated* with that key within the data structure. We&#39;ll show an example soon.
+
+While these look familiar to data structures found elsewhere, Clojure&#39;s data structures contain a hidden strength. They are immutable. Pause and let that sink in. In Clojure, data never changes. What!?! This probably sounds weird to you, but it will make more sense as we go along.
+
+We are entering the territory of functional programming, Clojure&#39;s wheelhouse. Clojure has hundreds of functions (a named operation), dozens of which you will use regularly, which take immutable data as input and return a new piece of immutable data as output.
+
+This simple mental model, *old data in, new data out*, describes the *modus operandi* of solving problems in Clojure. A chain of one or more functions are executed based on the need to produce *result data* from *input data*, until the final result assumes a shape which accurately satisfies the problem at hand. Functions in Clojure compose elegantly, allowing a rich `dialogue of intent` between the programmer and Clojure.
+
+&quot;But wait,&quot; you ask &quot;don&#39;t programs do things besides manipulate data?&quot;
+
+Yes and no. We do use programs to cause things to happen in the world. We call these things `effects`, such printing to screen or printer, writing data to hard drive, sending network traffic, or flying a drone. However, as discussed in the previous section *Clojure is data-centric*, these resources are often represented as data or use data a the `signal` to cause or configure the effects they produce.
+
+We will dig much more deeply into the topic of immutable data early on in this tutorial, but for now the important things to know are that Clojure achieves this technical feat using some smart data-sharing algorithms under the hood and **immutable data eradicates a wide array of common programming pitfalls**. It makes programs easier to reason about and illuminates the otherwise hidden interactions between the runtime components (functions) of a program. It&#39;s hard to over-hype the positive effect this will have on your programming career and the success of your projects. It&#39;s the fountain source of joy which Clojure programmers are renowned to experience upon mastering the Clojure way of doing things.
+
+### Clojure is a vision
+
+Clojure is a bit of a paradox. On one hand, it&#39;s rock solid in the core functionality it provides. On the other, Clojure continues to innovate new language features and delight its users with novel, immensely powerful functionality. Most notably, [Clojure Spec](https://clojure.org/about/spec) was recently introduced which provides an à la carte data specification system that brings the power of static types but with much greater agility for the programmer.
+
+Clojure isn&#39;t shy about borrowing what works. Communicating Sequential Processes (CSP) have been popularized by Google&#39;s Go language. Clojure adopted this paradigm via its core.async *library* (a named set of functions). Clojurians have been quick to pick up CSP, but have learned that (in general) its best used at the edge of a system, not at the heart of one. I mention this because I&#39;ve learned so much more than I ever thought possible because of the brilliant minds in Clojure who freely share their hard earned programming wisdom. 
+
+These professionals aren&#39;t doing things the hard way. They are going with the grain of the wood and solving problems in the most natural possible way. It isn&#39;t a perfect way. There&#39;s will always be room for improvement and you can help by sharing your learning experiences with us and Clojure community at large. The progress early Clojurians have made since its inception in 2007 is staggering! We are truly standing on the shoulder of giants.
+
+To me, Clojure represents a vision of a better way of doing things.
+
+### Clojure is a community
+
+It&#39;s also important to note that Clojure is a group effort. There is a vibrant and flourishing [community](https://clojure.org/community/success_stories) of highly competent people eager to help you succeed in your programming goals. Clojure and ClojureScript are Open Source and freely available for you to use to create robust software solutions.
+
+Clojure is a fast growing group of people who work diligently to continuously improve the state-of-the-art in software development.
+
+Clojure has many groups, Slack Channels, IRC channels, and forum&#39;s, including one I created: http://discuss.thevalueoflearning.org/
+
+You will be readily welcomed anywhere you happen to plug into the community online or at an in-person event, such a [user group meeting](https://dev.clojure.org/display/community/Clojure+User+Groups).
+
+## Why learn Clojure?
+
+I can&#39;t answer this question for you. That would be too presumptive of me. But I can tell you why I chose Clojure.
+
+In a nutshell, Clojure ticks two major boxes for me.
+
+First and foremost, Clojure is highly practical. Rick Hickey has focused the language strongly around creating business value. There&#39;s a recent [success story](https://youtu.be/3y7xzH8jB8A) about an Indonesian company that has experienced a 500% increase in their feature release productivity after switching from Go to Clojure. I love stories like these! I intend to use Clojure pervasively in my businesses. Clojure is general enough that I could pivot my business in practically any direction and still use Clojure to build on. 
+
+Secondly, Clojure opens up a world of learning and exploration above and beyond what I experienced in other languages. Perhaps this has a lot to do with where I was in my learning journey at the time, but I&#39;m convinced that there really is something uniquely special about the ideas I&#39;m being exposed to in this community. 
+
+As a life-long learner my insatiable curiosity will be occupied for years to come. Paradoxically, [Clojure is boring](https://8thlight.com/blog/colin-jones/2016/10/06/clojure-is-boring.html), and that&#39;s a good thing!
+
+### A technical reason
+
+There&#39;s also one significant technical reason I chose Clojure that has to do with databases. Most applications deal with nested data structures or object hierarchies. Object Relational Management layers are used to solve the N+1 problem and stuff nested data into tabular relational databases. I have first hand experience with an expertly built application which required significant alteration of the data model itself to accommodate the needs of the database.
+
+I wrote more about this reason in an [online interview](http://discuss.purelyfunctional.tv/t/jay-martin-clojure-remote-2017-interview/925) with well-known Clojure educator, Eric Normand of [PurelyFunctional.tv](http://purelyfunctional.tv), which I refer you to if you&#39;d like to dig deeper on the topic.
+
+### Other reasons
+
+There are many reasons to use Clojure, so of which may be more or less important to your situation.
+
+Clojure is web scale out of the box. Clojure has powerful concurrency primitives built-in to the heart of the language. It is unconstrained by a Global Interpreter Lock (GIL), like Ruby and Python are. This isn&#39;t a big deal for most new companies, but if you are lucky enough to experience overnight success, perhaps you get selected to go the Oprah show, then you&#39;ll be glad you picked Clojure. Most of these web scale issues have to do with architectural issues in addition to language features. A web search for `twitter scaling issues with ruby on rails` will list articles which should tell both sides of the story pretty well. Oh, the problems we should have, right!?!
+
+## Our online site
+
+The URL for this guide is: http://pathwayclojure.org 
+
+## Online REPLs
+
+https://repl.it/languages/clojure
+
+http://app.klipse.tech/
+
+
+## Reading Clojure
+
+Here&#39;s a [video](https://youtu.be/Ru609Kxfy8A) to help learn to read and write Clojure code.
+
+### links mentioned in video
+https://clojure.org/reference/reader#_reader_forms
+
+https://clojure.org/guides/learn/syntax
+
+https://clojure.org/guides/learn/functions
+
+## Command-Line Quick Start
+
+Your computer system comes with a command-line application where you can enter text based instructions to control its basic operations. Learning to create, rename, edit, delete and move files and directories on our system from the command line (aka shell, terminal, console, bash prompt etc.) is an important skill to learn and will help you successfully follow along with this and other online tutorials.
+
+If you are a Windows user, please install and use [Babun](http://babun.github.io/) to get setup with zsh and bash, two compatible and popular shell programs. This will give you practice with Linux style shells which you will encounter when deploying your web application to a server.
+
+For all users, we recommend installing the program [trash](https://github.com/sindresorhus/trash), a program which you use instead of `rm` to avoid accidentally and permanently deleting important files. You may need to command-line training before you&#39;re comfortable installing trash.
+
+If you&#39;re new to the command line, we recommend the [Introduction to the command-line interface](https://tutorial.djangogirls.org/en/intro_to_command_line/) because each command is illustrated for each platform. If you&#39;re a Windows user with Babun installed, you can follow the Linux examples.
+
+### Use Bash or Zsh
+
+Bash and Zsh are highly inter-operable shells. Bash is installed on all servers. Zsh isn&#39;t often installed by default but is more powerful and slick. 
+
+Wes Bos offers a free command-line video course about Zsh called [Command Line Power User](https://commandlinepoweruser.com/).
+
+I happen to use Zsh. Please use either Bash or Zsh when following along with this tutorial.
+
+### Other command-line resources
+
+[The Linux Command Line](http://linuxcommand.org/tlcl.php)
+
+[From Bash to Zsh](https://www.amazon.com/Bash-Shell-Conquering-Command-Line/dp/1590593766)
+
+[https://www.gnu.org/software/bash/](https://www.gnu.org/software/bash/)
+
+
+
+## Running Clojure Code
+
+There are several ways to run or execute Clojure code because Clojure runs in various contexts, e.g. the JVM, the CLR, the Browser, and Node.js.
+
+This section seeks to explore and discover these various methods of code execution and ultimately help determine which method is best suited for which objectives. However, let&#39;s keep things simple at first and build up from there.
+
+Tutorial pre-requisite: Below we run shell commands. If you&#39;re not familiar with the running commands from your system&#39;s shell or terminal (or if you&#39;re a Windows user), please first read the section [Command Line Quick Start](#command-line-quick-start).
+
+
+### Clojure on the JVM
+
+#### Fundamentals
+
+The fact that Clojure runs on the JVM is the biggest reason why enterprises such as Walmart and Staples adopted this relatively young language. Clojure doesn&#39;t concern itself with Garbage Collection (cleaning up stale memory resources) or other low-level concerns, leaving these to the JVM, which you can think of as like a computer inside your computer. This additional level of abstraction allows your programs to be *portable*, i.e. to run on completely different operating systems such as MacOS, Windows, and Linux to name a few.
+
+Clojure is a program which runs on the JVM. The Clojure program is used to evaluate Clojure code. That evaluation process can be short lived or ongoing.
+
+First let&#39;s examine a short-lived example of Clojure code execution. Open your system&#39;s command line and execute the following steps:
+
+##### Step 1: Make a directory called `runclj`:
+
+</code></pre>
+<h5><a href="#step-2-change-current-directory-to-" name="step-2-change-current-directory-to-"></a>Step 2: Change current directory to <code>runclj</code>:</h5>
+<pre><code class="cd runclj```"><br/>##### Step 3: Download `clojure-1.9.0-beta1.jar` and place it in the `runclj` directory:
+
+&gt;Note: If you have `wget` or `curl`, you can download the Clojure jar using either command or you can click on [this download link](https://repo1.maven.org/maven2/org/clojure/clojure/1.9.0-beta1/clojure-1.9.0-beta1.jar) and direct the download to the `runclj` when prompted. If executing the command-line: `which wget` returns nothing, then `wget` is not installed. Likewise for `curl`.
+
+</code></pre>
+<p>--or-- </p>
+<pre><code class="curl -O https://repo1.maven.org/maven2/org/clojure/clojure/1.9.0-beta1/clojure-1.9.0-beta1.jar```"><br/><br/>&gt; Note: In the future, you won&#39;t typically need to download Clojure manually, but if you do Clojure releases can be found here:
+&gt; https://clojure.org/community/downloads
+
+
+##### Step 4: Create file named `howdy.clj`:
+
+</code></pre>
+<h5><a href="#step-5-populate-file-with-some-clojure-code-plain-text-" name="step-5-populate-file-with-some-clojure-code-plain-text-"></a>Step 5: Populate file with some Clojure code (plain text):</h5>
+<p>Open the file <code>howdy.clj</code> with your system's default text editor:</p>
+<pre><code class="open howdy.clj```"><br/>Then type in the following text and save the file:
+
+</code></pre>
+<p>--or--</p>
+<p>Populate the file from the command line:</p>
+<p><code>echo &quot;(println \&quot;Howdy, world\&quot;)&quot; &gt; howdy.clj</code></p>
+<blockquote>
+  <p>Note: The command line above <em>escapes</em> some quote marks with a backslash character just before the double quote character so that the echo command won't interpret that character for itself, and will instead treat it as ordinary data, just like the rest of the text, except for the two unquoted quotation marks. For a deeper dive into this topic, see <a href="http://wiki.bash-hackers.org/syntax/quoting">this page</a>.</p>
+</blockquote>
 <p>Further Resources:</p>
 <p><a href="https://clojure.org/about/dynamic">https://clojure.org/about/dynamic</a></p>
 <p><a href="https://clojure.org/about/jvm_hosted">https://clojure.org/about/jvm_hosted</a></p>
 <p><a href="http://www.unexpected-vortices.com/clojure/brief-beginners-guide/general-overview.html#some-info-about-java">A Brief Beginner's Guide To Clojure, General Overview</a></p>
 <p>Quote from Clojurians Slack user noisesmith: another fun trick is that you can run your uberjar to get a repl that can use all of your deps and namespaces <code>java -cp my.uber.jar clojure.main</code> - optionally <code>rlwrap java -cp my.uber.jar clojure.main</code> on a *nix to get command line editing and history too in a pinch I've used this to speed up debugging issues on remote servers</p>
+<p><a href="http://www.thegeekstuff.com/2012/07/wget-curl">Using curl and wget</a></p>
+<p><a href="https://daniel.haxx.se/docs/curl-vs-wget.html">curl vs wget</a></p>
 <h2><a href="#writing-games-in-clojure-clojurescript" name="writing-games-in-clojure-clojurescript"></a>Writing games in Clojure &amp; ClojureScript</h2>
 <p><a href="https://youtu.be/0GzzFeS5cMc">Zach Oakes - Making Games at Runtime with Clojure</a></p>
 <p><a href="https://youtu.be/tJr_TD1BtF0">Clojure in Unity 3D: Functional Video Game Development" by Ramsey Nasser and Tims Gardner</a></p>
