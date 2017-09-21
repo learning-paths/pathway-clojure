@@ -251,34 +251,51 @@ Clojure is a program which runs on the JVM. The Clojure program is used to evalu
 
 First let's examine a short-lived example of Clojure code execution. Open your system's command line and execute the following steps:
 
-##### Step 1: Make a directory called `runclj`:
+##### Goal: Run a Clojure expression directly on the command-line.
+
+###### Step 1: Make a directory called `runclj`:
 
 ```mkdir runclj```
 
-##### Step 2: Change current directory to `runclj`:
+###### Step 2: Change current directory to `runclj`:
 
 ```cd runclj```
 
-##### Step 3: Download `clojure-1.9.0-beta1.jar` and place it in the `runclj` directory:
+###### Step 3: Download `clojure-1.8.0` and place it in the `runclj` directory:
 
->Note: If you have `wget` or `curl`, you can download the Clojure jar using either command or you can click on [this download link](https://repo1.maven.org/maven2/org/clojure/clojure/1.9.0-beta1/clojure-1.9.0-beta1.jar) and direct the download to the `runclj` when prompted. If executing the command-line: `which wget` returns nothing, then `wget` is not installed. Likewise for `curl`.
+>Note: If you have `wget` or `curl`, you can download the Clojure jar using either command or you can click on [this download link](https://repo1.maven.org/maven2/org/clojure/clojure/1.8.0/clojure-1.8.0.jar) and direct the download to the `runclj` when prompted. If executing the command-line: `which wget` returns nothing, then `wget` is not installed. Likewise for `curl`.
 
-```wget https://repo1.maven.org/maven2/org/clojure/clojure/1.9.0-beta1/clojure-1.9.0-beta1.jar```
+```wget https://repo1.maven.org/maven2/org/clojure/clojure/1.8.0/clojure-1.8.0.jar``` 
 
 --or-- 
 
-```curl -O https://repo1.maven.org/maven2/org/clojure/clojure/1.9.0-beta1/clojure-1.9.0-beta1.jar```
+```curl -O https://repo1.maven.org/maven2/org/clojure/clojure/1.8.0/clojure-1.8.0.jar```
 
 
 > Note: In the future, you won't typically need to download Clojure manually, but if you do Clojure releases can be found here:
 > https://clojure.org/community/downloads
 
+###### Step 4:
 
-##### Step 4: Create file named `howdy.clj`:
+```java -cp clojure-1.8.0.jar clojure.main -e "(+ 2 3)"```
+
+You should see the output: 5
+
+If not, recheck your work.
+
+
+##### Goal Reached: Ran a Clojure expression directly on the command-line.
+
+> Note: For more on running Clojure from the command-line run `java -jar clojure-1.8.0.jar --help` in the present working directory.
+
+
+##### Goal: Run a Clojure file from the command-line.
+
+###### Step 1: Create file named `howdy.clj`:
 
 ```touch howdy.clj```
 
-##### Step 5: Populate file with some Clojure code (plain text):
+###### Step 2: Populate file with some Clojure code (plain text):
 
 Open the file `howdy.clj` with your system's default text editor:
 
@@ -292,13 +309,24 @@ Then type in the following text and save the file:
 
 Populate the file from the command line:
 
-```echo "(println \"Howdy, world\")" > howdy.clj```
+```echo '(println "Howdy, world")' > howdy.clj```
 
-> Note: The command line above *escapes* some quote marks with a backslash character just before the double quote character so that the echo command won't interpret that character for itself, and will instead treat it as ordinary data, just like the rest of the text, except for the two unquoted quotation marks. For a deeper dive into this topic, see [this page](http://wiki.bash-hackers.org/syntax/quoting).
-
-
+> Note: The command line above *escapes* the double-quote marks by using single quotes (strong quoting) to surround the echo's argument string so that the echo command won't interpret the double-quote characters for itself, and will instead treat them as ordinary data, just like the rest of the text. For a deeper dive into the topic of syntax quoting in the shell, see [this page](http://wiki.bash-hackers.org/syntax/quoting).
 
 
+##### Step 3: 
+
+```java -cp clojure-1.8.0.jar clojure.main howdy.clj```
+
+You should see the output: Howdy, world
+
+If not, recheck your work.
+
+
+> Note: Changes are coming to Clojure 1.9 which will introduce a convenience command called `clj` which will wrap the `java` command used above. You can learn more by watching Alex Miller's talk [Dependency Heaven](https://youtu.be/sStlTye-Kjk).
+
+
+##### Goal Reached: Ran a Clojure file from the command-line.
 
 
 
@@ -306,7 +334,9 @@ Populate the file from the command line:
 
 
 
-Further Resources:
+
+
+###### Further Resources:
 
 https://clojure.org/about/dynamic
 
@@ -368,7 +398,7 @@ Good resource for more intermediate to advanced programmers:
 
 Duct 
 
-Arachne
+[Arachne](http://arachne-framework.org/)
 
 Pedestal
 

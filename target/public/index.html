@@ -196,35 +196,55 @@ Clojure is a program which runs on the JVM. The Clojure program is used to evalu
 
 First let&#39;s examine a short-lived example of Clojure code execution. Open your system&#39;s command line and execute the following steps:
 
-##### Step 1: Make a directory called `runclj`:
+##### Goal: Run a Clojure expression directly on the command-line.
+
+###### Step 1: Make a directory called `runclj`:
 
 </code></pre>
-<h5><a href="#step-2-change-current-directory-to-" name="step-2-change-current-directory-to-"></a>Step 2: Change current directory to <code>runclj</code>:</h5>
-<pre><code class="cd runclj```"><br/>##### Step 3: Download `clojure-1.9.0-beta1.jar` and place it in the `runclj` directory:
+<h6><a href="#step-2-change-current-directory-to-" name="step-2-change-current-directory-to-"></a>Step 2: Change current directory to <code>runclj</code>:</h6>
+<pre><code class="cd runclj```"><br/>###### Step 3: Download `clojure-1.8.0` and place it in the `runclj` directory:
 
-&gt;Note: If you have `wget` or `curl`, you can download the Clojure jar using either command or you can click on [this download link](https://repo1.maven.org/maven2/org/clojure/clojure/1.9.0-beta1/clojure-1.9.0-beta1.jar) and direct the download to the `runclj` when prompted. If executing the command-line: `which wget` returns nothing, then `wget` is not installed. Likewise for `curl`.
+&gt;Note: If you have `wget` or `curl`, you can download the Clojure jar using either command or you can click on [this download link](https://repo1.maven.org/maven2/org/clojure/clojure/1.8.0/clojure-1.8.0.jar) and direct the download to the `runclj` when prompted. If executing the command-line: `which wget` returns nothing, then `wget` is not installed. Likewise for `curl`.
 
 </code></pre>
 <p>--or-- </p>
-<pre><code class="curl -O https://repo1.maven.org/maven2/org/clojure/clojure/1.9.0-beta1/clojure-1.9.0-beta1.jar```"><br/><br/>&gt; Note: In the future, you won&#39;t typically need to download Clojure manually, but if you do Clojure releases can be found here:
+<pre><code class="curl -O https://repo1.maven.org/maven2/org/clojure/clojure/1.8.0/clojure-1.8.0.jar```"><br/><br/>&gt; Note: In the future, you won&#39;t typically need to download Clojure manually, but if you do Clojure releases can be found here:
 &gt; https://clojure.org/community/downloads
 
-
-##### Step 4: Create file named `howdy.clj`:
-
-</code></pre>
-<h5><a href="#step-5-populate-file-with-some-clojure-code-plain-text-" name="step-5-populate-file-with-some-clojure-code-plain-text-"></a>Step 5: Populate file with some Clojure code (plain text):</h5>
-<p>Open the file <code>howdy.clj</code> with your system's default text editor:</p>
-<pre><code class="open howdy.clj```"><br/>Then type in the following text and save the file:
+###### Step 4:
 
 </code></pre>
-<p>--or--</p>
-<p>Populate the file from the command line:</p>
-<p><code>echo &quot;(println \&quot;Howdy, world\&quot;)&quot; &gt; howdy.clj</code></p>
+<p>You should see the output: 5</p>
+<p>If not, recheck your work.</p>
+<h5><a href="#goal-reached-ran-a-clojure-expression-directly-on-the-command-line-" name="goal-reached-ran-a-clojure-expression-directly-on-the-command-line-"></a>Goal Reached: Ran a Clojure expression directly on the command-line.</h5>
 <blockquote>
-  <p>Note: The command line above <em>escapes</em> some quote marks with a backslash character just before the double quote character so that the echo command won't interpret that character for itself, and will instead treat it as ordinary data, just like the rest of the text, except for the two unquoted quotation marks. For a deeper dive into this topic, see <a href="http://wiki.bash-hackers.org/syntax/quoting">this page</a>.</p>
+  <p>Note: For more on running Clojure from the command-line run <code>java -jar clojure-1.8.0.jar --help</code> in the present working directory.</p>
 </blockquote>
-<p>Further Resources:</p>
+<h5><a href="#goal-run-a-clojure-file-from-the-command-line-" name="goal-run-a-clojure-file-from-the-command-line-"></a>Goal: Run a Clojure file from the command-line.</h5>
+<h6><a href="#step-1-create-file-named-" name="step-1-create-file-named-"></a>Step 1: Create file named <code>howdy.clj</code>:</h6>
+<pre><code class="touch howdy.clj```"><br/>###### Step 2: Populate file with some Clojure code (plain text):
+
+Open the file `howdy.clj` with your system&#39;s default text editor:
+
+</code></pre>
+<p>Then type in the following text and save the file:</p>
+<pre><code class="(println "Howdy, world")```"><br/>--or--
+
+Populate the file from the command line:
+
+</code></pre>
+<blockquote>
+  <p>Note: The command line above <em>escapes</em> the double-quote marks by using single quotes (strong quoting) to surround the echo's argument string so that the echo command won't interpret the double-quote characters for itself, and will instead treat them as ordinary data, just like the rest of the text. For a deeper dive into the topic of syntax quoting in the shell, see <a href="http://wiki.bash-hackers.org/syntax/quoting">this page</a>.</p>
+</blockquote>
+<h5><a href="#step-3-" name="step-3-"></a>Step 3:</h5>
+<p><code>java -cp clojure-1.8.0.jar clojure.main howdy.clj</code></p>
+<p>You should see the output: Howdy, world</p>
+<p>If not, recheck your work.</p>
+<blockquote>
+  <p>Note: Changes are coming to Clojure 1.9 which will introduce a convenience command called <code>clj</code> which will wrap the <code>java</code> command used above. You can learn more by watching Alex Miller's talk <a href="https://youtu.be/sStlTye-Kjk">Dependency Heaven</a>.</p>
+</blockquote>
+<h5><a href="#goal-reached-ran-a-clojure-file-from-the-command-line-" name="goal-reached-ran-a-clojure-file-from-the-command-line-"></a>Goal Reached: Ran a Clojure file from the command-line.</h5>
+<h6><a href="#further-resources-" name="further-resources-"></a>Further Resources:</h6>
 <p><a href="https://clojure.org/about/dynamic">https://clojure.org/about/dynamic</a></p>
 <p><a href="https://clojure.org/about/jvm_hosted">https://clojure.org/about/jvm_hosted</a></p>
 <p><a href="http://www.unexpected-vortices.com/clojure/brief-beginners-guide/general-overview.html#some-info-about-java">A Brief Beginner's Guide To Clojure, General Overview</a></p>
@@ -253,7 +273,7 @@ First let&#39;s examine a short-lived example of Clojure code execution. Open yo
 <h2><a href="#clojure-web-development" name="clojure-web-development"></a>Clojure Web Development</h2>
 <p><a href="https://youtu.be/_LghX4oDWcY">Frameworkless Web Development in Clojure by Andreas ‘Kungi’ Klein</a></p>
 <p>Duct </p>
-<p>Arachne</p>
+<p><a href="http://arachne-framework.org/">Arachne</a></p>
 <p>Pedestal</p>
 <p>Edge</p>
 <p>Bidi</p>
