@@ -158,6 +158,11 @@ Clojure has many groups, Slack Channels, IRC channels, and forum's, including on
 
 You will be readily welcomed anywhere you happen to plug into the community online or at an in-person event, such a [user group meeting](https://dev.clojure.org/display/community/Clojure+User+Groups).
 
+### Clojure is a program
+
+To ground all this hyperbole in absolute truth, Clojure is a program written in Java and Clojure. We'll expand on this in the *Running Clojure Code* Section below.
+
+
 ## Why learn Clojure?
 
 I can't answer this question for you. That would be too presumptive of me. But I can tell you why I chose Clojure.
@@ -204,6 +209,15 @@ https://clojure.org/guides/learn/syntax
 
 https://clojure.org/guides/learn/functions
 
+
+### Clojure Style Guide
+
+https://github.com/bbatsov/clojure-style-guide
+
+### Clojure projects reputed to contain readable code
+
+[Funcool](https://funcool.github.io/doc/)
+
 ## Command-Line Quick Start
 
 Your computer system comes with a command-line application where you can enter text based instructions to control its basic operations. Learning to create, rename, edit, delete and move files and directories on our system from the command line (aka shell, terminal, console, bash prompt etc.) is an important skill to learn and will help you successfully follow along with this and other online tutorials.
@@ -224,13 +238,15 @@ I happen to use Zsh. Please use either Bash or Zsh when following along with thi
 
 ### Other command-line resources
 
+[Learn Enough Command Line to Be Dangerous](https://www.learnenough.com/command-line-tutorial#cha-command_line)
+
 [The Linux Command Line](http://linuxcommand.org/tlcl.php)
 
 [From Bash to Zsh](https://www.amazon.com/Bash-Shell-Conquering-Command-Line/dp/1590593766)
 
 [https://www.gnu.org/software/bash/](https://www.gnu.org/software/bash/)
 
-
+[cmder](http://cmder.net/) Alternative to Babun, shell for Windows.
 
 ## Running Clojure Code
 
@@ -369,6 +385,8 @@ in a pinch I've used this to speed up debugging issues on remote servers
 
 [SICP Distilled](http://www.sicpdistilled.com/)
 
+[noobtuts](https://noobtuts.com/clojure)
+
 [clojureD 2017: "Writing Clojure at Runtime with Nightlight" by Zach Oakes](https://youtu.be/EG5BtBEow24)
 
 https://clojure.org/guides/getting_started
@@ -385,8 +403,15 @@ http://howistart.org/posts/clojure/1/index.html
 
 http://writingcoding.blogspot.com/2008/07/stemming-part-8-macros.html
 
+http://rosettacode.org/wiki/Rosetta_Code
+
 Good resource for more intermediate to advanced programmers:
+
+[Relevance labrepl](https://github.com/relevance/labrepl) A bit outdated on a couple of points but covers a huge swath of the language concisely and interactively.
+
 [CLOJURE - FUNCTIONAL PROGRAMMING FOR THE JVM](https://objectcomputing.com/resources/publications/sett/march-2009-clojure-functional-programming-for-the-jvm/)
+
+[Planet Clojure](http://planet.clojure.in/) Blog aggregator for Clojure.
 
 ## Scripting in Clojure & ClojureScript
 
