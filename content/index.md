@@ -383,6 +383,8 @@ in a pinch I've used this to speed up debugging issues on remote servers
 
 [Maria Cloud: A gentle introduction to a subset and alternative set of Clojure online](https://www.maria.cloud/)
 
+[Clojure Bridge Curriculum](https://github.com/ClojureBridge/curriculum)
+
 [SICP Distilled](http://www.sicpdistilled.com/)
 
 [noobtuts](https://noobtuts.com/clojure)
@@ -390,6 +392,8 @@ in a pinch I've used this to speed up debugging issues on remote servers
 [clojureD 2017: "Writing Clojure at Runtime with Nightlight" by Zach Oakes](https://youtu.be/EG5BtBEow24)
 
 https://clojure.org/guides/getting_started
+
+[Clojure from the Ground Up by Kyle Kingsbury](https://aphyr.com/posts/301-clojure-from-the-ground-up-welcome)
 
 https://practicalli.github.io/
 
